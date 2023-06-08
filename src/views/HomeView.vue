@@ -1,6 +1,7 @@
 <template>
+
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+      <img src="../assets/ui/logo.png" alt="League of Legends Logo" class = img-fluid width=500>
     <HelloWorld msg="Hello World"/>
   </div>
 </template>
