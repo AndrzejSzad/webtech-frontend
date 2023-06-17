@@ -1,126 +1,59 @@
-
 <template>
-    <div class="container-fluid">
-        <h1> Items </h1>
-        <div class=row-cols-auto>
-            <div class= "col" v-for="item in items" :key="item.key">
-                <div class="card w-25 h-25 ">
-                    <h5> {{item.name}} </h5>
-                </div>
-
+   <div class= "container">
+     <div class="row row-cols-1 row-cols-md-4 g-4">
+        <h1>Items</h1>
+        <div class="col" v-for="item in items" :key="item.key">
+          <div class="card h-25">
+            <img :src="getImage(item)" class="card-img-top" :alt="item.name">
+            <div class="card-body">
+              <h5 class="card-title"> {{item.name}}</h5>
+              <p class="card-text">
+                {{item.name}} kostet {{item.gold}} und verleiht dir {{item.stats}}
+              </p>
             </div>
-        </div>
-
-    </div>
+          </div>
+     </div>
+     </div>
+   </div>
 
 </template>
 
-
 <script>
+
+
+
 export default {
-    name: "Items",
-    data(){
-        return{
+    data() {
+        return {
             items: [
-                {
-                    key: 4644,
-                    name: "Crown of the Shattered Queen",
-                    image: "../assets/item/4644.png",
-                    gold: 2800,
-                        "tags": [
-                          "Health",
-                          "SpellDamage",
-                          "Mana",
-                          "NonbootsMovement",
-                          "AbilityHaste"
-                        ],
-                stats: {
-                      "FlatHPPoolMod": 250,
-                      "FlatMPPoolMod": 600,
-                      "FlatMagicDamageMod": 70}
+            ],
+            selectedItem: null,
+        };
+    },
+    methods: {
+        selectItem(item) {
+            this.selectedItem = item;
+        },
+      getImage(item){
+          return require('../assets/'+ item.key + '.pdf')
 
+      }
+    },
+    mounted() {
+        const endpoint = process.env.VUE_APP_BACKEND_BASEURL + '/items'
+        const requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
 
-                },
-                {
-                    key: 6632,
-                        name: "Divine Sunderer",
-                        image: "../assets/item/6632.png",
-                        gold: 3300,
-                        tags: [
-                          "Health",
-                          "Damage",
-                          "CooldownReduction",
-                          "OnHit",
-                          "MagicPenetration",
-                          "ArmorPenetration",
-                          "AbilityHaste"
-                        ],
-                        stats: {
-                          "FlatPhysicalDamageMod": 40,
-                          "FlatHPPoolMod": 300
-                }
-                },
-                {
-                   key: 6691,
-                       name: "Duskblade of Draktharr",
-                       image: "../assets/item/6691.png",
-                       gold: 3100,
-                       tags: [
-                         "Damage",
-                         "Stealth",
-                         "CooldownReduction",
-                         "Slow",
-                         "NonbootsMovement",
-                         "ArmorPenetration",
-                         "AbilityHaste"
-                       ],
-                       stats: {
-                         "FlatPhysicalDamageMod": 60
-                       }
-                     },
-                {
-                    key: 6691,
-                    name: "Duskblade of Draktharr",
-                    image: "../assets/item/6691.png",
-                    gold: 3100,
-                    tags: [
-                      "Damage",
-                      "Stealth",
-                      "CooldownReduction",
-                      "Slow",
-                      "NonbootsMovement",
-                      "ArmorPenetration",
-                      "AbilityHaste"
-                    ],
-                    stats: {
-                      "FlatPhysicalDamageMod": 60
-                    }
-                  },
-                  {
-                    key: 6692,
-                    name: "Eclipse",
-                    image: "../assets/item/6692.png",
-                    gold: 3100,
-                    tags: [
-                      "Damage",
-                      "CooldownReduction",
-                      "NonbootsMovement",
-                      "ArmorPenetration",
-                      "AbilityHaste"
-                    ],
-                    stats: {
-                      "FlatPhysicalDamageMod": 60
-                    }
-                  }
-                ]
-        }
-    }
+        fetch(endpoint, requestOptions)
+            .then(response => response.json())
+            .then(result => result.forEach(item => {
+                this.items.push(item)
+            }))
+            .catch(error => console.log('error', error))
+    },
 }
 
 
 </script>
-
-
-<style scoped>
-
-</style>
