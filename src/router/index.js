@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ItemSetsView from '../views/ItemSetsView.vue';
 import ChampionView from "@/views/ChampionView.vue";
-
+import ItemView from '../views/ItemView';
 
 const routes = [
   {
@@ -26,6 +26,12 @@ const routes = [
     path: '/champions',
     name: 'champions',
     component: ChampionView
+
+  },
+  {
+    path: '/items',
+    name: 'items',
+    component: ItemView
 
   }
 ]
