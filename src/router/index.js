@@ -2,8 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ItemSetsView from '../views/ItemSetsView.vue';
-import ChampionView from "@/views/ChampionView.vue";
-import ItemView from '../views/ItemView';
+import ChampionsView from "../views/ChampionsView.vue";
 
 const routes = [
   {
@@ -25,13 +24,7 @@ const routes = [
   {
     path: '/champions',
     name: 'champions',
-    component: ChampionView
-
-  },
-  {
-    path: '/items',
-    name: 'items',
-    component: ItemView
+    component: ChampionsView
 
   }
 ]

@@ -2,816 +2,816 @@
     {
       "key": "266",
       "name": "Aatrox",
-      "image": "../assets/champion/Aatrox.png"
+      "image": "Aatrox.png"
     },
     {
       "key": "103",
       "name": "Ahri",
-      "image": "../assets/champion/Ahri.png"
+      "image": "Ahri.png"
     },
     {
       "key": "84",
       "name": "Akali",
-      "image": "../assets/champion/Akali.png"
+      "image": "Akali.png"
     },
     {
       "key": "166",
       "name": "Akshan",
-      "image": "../assets/champion/Akshan.png"
+      "image": "Akshan.png"
     },
     {
       "key": "12",
       "name": "Alistar",
-      "image": "../assets/champion/Alistar.png"
+      "image": "Alistar.png"
     },
     {
       "key": "32",
       "name": "Amumu",
-      "image": "../assets/champion/Amumu.png"
+      "image": "Amumu.png"
     },
     {
       "key": "34",
       "name": "Anivia",
-      "image": "../assets/champion/Anivia.png"
+      "image": "Anivia.png"
     },
     {
       "key": "1",
       "name": "Annie",
-      "image": "../assets/champion/Annie.png"
+      "image": "Annie.png"
     },
     {
       "key": "523",
       "name": "Aphelios",
-      "image": "../assets/champion/Aphelios.png"
+      "image": "Aphelios.png"
     },
     {
       "key": "22",
       "name": "Ashe",
-      "image": "../assets/champion/Ashe.png"
+      "image": "Ashe.png"
     },
     {
       "key": "136",
       "name": "Aurelion Sol",
-      "image": "../assets/champion/Aurelion Sol.png"
+      "image": "AurelionSol.png"
     },
     {
       "key": "268",
       "name": "Azir",
-      "image": "../assets/champion/Azir.png"
+      "image": "Azir.png"
     },
     {
       "key": "432",
       "name": "Bard",
-      "image": "../assets/champion/Bard.png"
+      "image": "Bard.png"
     },
     {
       "key": "200",
       "name": "Bel'Veth",
-      "image": "../assets/champion/Bel'Veth.png"
+      "image": "Belveth.png"
     },
     {
       "key": "53",
       "name": "Blitzcrank",
-      "image": "../assets/champion/Blitzcrank.png"
+      "image": "Blitzcrank.png"
     },
     {
       "key": "63",
       "name": "Brand",
-      "image": "../assets/champion/Brand.png"
+      "image": "Brand.png"
     },
     {
       "key": "201",
       "name": "Braum",
-      "image": "../assets/champion/Braum.png"
+      "image": "Braum.png"
     },
     {
       "key": "51",
       "name": "Caitlyn",
-      "image": "../assets/champion/Caitlyn.png"
+      "image": "Caitlyn.png"
     },
     {
       "key": "164",
       "name": "Camille",
-      "image": "../assets/champion/Camille.png"
+      "image": "Camille.png"
     },
     {
       "key": "69",
       "name": "Cassiopeia",
-      "image": "../assets/champion/Cassiopeia.png"
+      "image": "Cassiopeia.png"
     },
     {
       "key": "31",
       "name": "Cho'Gath",
-      "image": "../assets/champion/Cho'Gath.png"
+      "image": "Chogath.png"
     },
     {
       "key": "42",
       "name": "Corki",
-      "image": "../assets/champion/Corki.png"
+      "image": "Corki.png"
     },
     {
       "key": "122",
       "name": "Darius",
-      "image": "../assets/champion/Darius.png"
+      "image": "Darius.png"
     },
     {
       "key": "131",
       "name": "Diana",
-      "image": "../assets/champion/Diana.png"
+      "image": "Diana.png"
     },
     {
       "key": "119",
       "name": "Draven",
-      "image": "../assets/champion/Draven.png"
+      "image": "Draven.png"
     },
     {
       "key": "36",
       "name": "Dr. Mundo",
-      "image": "../assets/champion/Dr. Mundo.png"
+      "image": "DrMundo.png"
     },
     {
       "key": "245",
       "name": "Ekko",
-      "image": "../assets/champion/Ekko.png"
+      "image": "Ekko.png"
     },
     {
       "key": "60",
       "name": "Elise",
-      "image": "../assets/champion/Elise.png"
+      "image": "Elise.png"
     },
     {
       "key": "28",
       "name": "Evelynn",
-      "image": "../assets/champion/Evelynn.png"
+      "image": "Evelynn.png"
     },
     {
       "key": "81",
       "name": "Ezreal",
-      "image": "../assets/champion/Ezreal.png"
+      "image": "Ezreal.png"
     },
     {
       "key": "9",
       "name": "Fiddlesticks",
-      "image": "../assets/champion/Fiddlesticks.png"
+      "image": "Fiddlesticks.png"
     },
     {
       "key": "114",
       "name": "Fiora",
-      "image": "../assets/champion/Fiora.png"
+      "image": "Fiora.png"
     },
     {
       "key": "105",
       "name": "Fizz",
-      "image": "../assets/champion/Fizz.png"
+      "image": "Fizz.png"
     },
     {
       "key": "3",
       "name": "Galio",
-      "image": "../assets/champion/Galio.png"
+      "image": "Galio.png"
     },
     {
       "key": "41",
       "name": "Gangplank",
-      "image": "../assets/champion/Gangplank.png"
+      "image": "Gangplank.png"
     },
     {
       "key": "86",
       "name": "Garen",
-      "image": "../assets/champion/Garen.png"
+      "image": "Garen.png"
     },
     {
       "key": "150",
       "name": "Gnar",
-      "image": "../assets/champion/Gnar.png"
+      "image": "Gnar.png"
     },
     {
       "key": "79",
       "name": "Gragas",
-      "image": "../assets/champion/Gragas.png"
+      "image": "Gragas.png"
     },
     {
       "key": "104",
       "name": "Graves",
-      "image": "../assets/champion/Graves.png"
+      "image": "Graves.png"
     },
     {
       "key": "887",
       "name": "Gwen",
-      "image": "../assets/champion/Gwen.png"
+      "image": "Gwen.png"
     },
     {
       "key": "120",
       "name": "Hecarim",
-      "image": "../assets/champion/Hecarim.png"
+      "image": "Hecarim.png"
     },
     {
       "key": "74",
       "name": "Heimerdinger",
-      "image": "../assets/champion/Heimerdinger.png"
+      "image": "Heimerdinger.png"
     },
     {
       "key": "420",
       "name": "Illaoi",
-      "image": "../assets/champion/Illaoi.png"
+      "image": "Illaoi.png"
     },
     {
       "key": "39",
       "name": "Irelia",
-      "image": "../assets/champion/Irelia.png"
+      "image": "Irelia.png"
     },
     {
       "key": "427",
       "name": "Ivern",
-      "image": "../assets/champion/Ivern.png"
+      "image": "Ivern.png"
     },
     {
       "key": "40",
       "name": "Janna",
-      "image": "../assets/champion/Janna.png"
+      "image": "Janna.png"
     },
     {
       "key": "59",
       "name": "Jarvan IV",
-      "image": "../assets/champion/Jarvan IV.png"
+      "image": "JarvanIV.png"
     },
     {
       "key": "24",
       "name": "Jax",
-      "image": "../assets/champion/Jax.png"
+      "image": "Jax.png"
     },
     {
       "key": "126",
       "name": "Jayce",
-      "image": "../assets/champion/Jayce.png"
+      "image": "Jayce.png"
     },
     {
       "key": "202",
       "name": "Jhin",
-      "image": "../assets/champion/Jhin.png"
+      "image": "Jhin.png"
     },
     {
       "key": "222",
       "name": "Jinx",
-      "image": "../assets/champion/Jinx.png"
+      "image": "Jinx.png"
     },
     {
       "key": "145",
       "name": "Kai'Sa",
-      "image": "../assets/champion/Kai'Sa.png"
+      "image": "Kaisa.png"
     },
     {
       "key": "429",
       "name": "Kalista",
-      "image": "../assets/champion/Kalista.png"
+      "image": "Kalista.png"
     },
     {
       "key": "43",
       "name": "Karma",
-      "image": "../assets/champion/Karma.png"
+      "image": "Karma.png"
     },
     {
       "key": "30",
       "name": "Karthus",
-      "image": "../assets/champion/Karthus.png"
+      "image": "Karthus.png"
     },
     {
       "key": "38",
       "name": "Kassadin",
-      "image": "../assets/champion/Kassadin.png"
+      "image": "Kassadin.png"
     },
     {
       "key": "55",
       "name": "Katarina",
-      "image": "../assets/champion/Katarina.png"
+      "image": "Katarina.png"
     },
     {
       "key": "10",
       "name": "Kayle",
-      "image": "../assets/champion/Kayle.png"
+      "image": "Kayle.png"
     },
     {
       "key": "141",
       "name": "Kayn",
-      "image": "../assets/champion/Kayn.png"
+      "image": "Kayn.png"
     },
     {
       "key": "85",
       "name": "Kennen",
-      "image": "../assets/champion/Kennen.png"
+      "image": "Kennen.png"
     },
     {
       "key": "121",
       "name": "Kha'Zix",
-      "image": "../assets/champion/Kha'Zix.png"
+      "image": "Khazix.png"
     },
     {
       "key": "203",
       "name": "Kindred",
-      "image": "../assets/champion/Kindred.png"
+      "image": "Kindred.png"
     },
     {
       "key": "240",
       "name": "Kled",
-      "image": "../assets/champion/Kled.png"
+      "image": "Kled.png"
     },
     {
       "key": "96",
       "name": "Kog'Maw",
-      "image": "../assets/champion/Kog'Maw.png"
+      "image": "KogMaw.png"
     },
     {
       "key": "897",
       "name": "K'Sante",
-      "image": "../assets/champion/K'Sante.png"
+      "image": "KSante.png"
     },
     {
       "key": "7",
       "name": "LeBlanc",
-      "image": "../assets/champion/LeBlanc.png"
+      "image": "Leblanc.png"
     },
     {
       "key": "64",
       "name": "Lee Sin",
-      "image": "../assets/champion/Lee Sin.png"
+      "image": "LeeSin.png"
     },
     {
       "key": "89",
       "name": "Leona",
-      "image": "../assets/champion/Leona.png"
+      "image": "Leona.png"
     },
     {
       "key": "876",
       "name": "Lillia",
-      "image": "../assets/champion/Lillia.png"
+      "image": "Lillia.png"
     },
     {
       "key": "127",
       "name": "Lissandra",
-      "image": "../assets/champion/Lissandra.png"
+      "image": "Lissandra.png"
     },
     {
       "key": "236",
       "name": "Lucian",
-      "image": "../assets/champion/Lucian.png"
+      "image": "Lucian.png"
     },
     {
       "key": "117",
       "name": "Lulu",
-      "image": "../assets/champion/Lulu.png"
+      "image": "Lulu.png"
     },
     {
       "key": "99",
       "name": "Lux",
-      "image": "../assets/champion/Lux.png"
+      "image": "Lux.png"
     },
     {
       "key": "54",
       "name": "Malphite",
-      "image": "../assets/champion/Malphite.png"
+      "image": "Malphite.png"
     },
     {
       "key": "90",
       "name": "Malzahar",
-      "image": "../assets/champion/Malzahar.png"
+      "image": "Malzahar.png"
     },
     {
       "key": "57",
       "name": "Maokai",
-      "image": "../assets/champion/Maokai.png"
+      "image": "Maokai.png"
     },
     {
       "key": "11",
       "name": "Master Yi",
-      "image": "../assets/champion/Master Yi.png"
+      "image": "MasterYi.png"
     },
     {
       "key": "902",
       "name": "Milio",
-      "image": "../assets/champion/Milio.png"
+      "image": "Milio.png"
     },
     {
       "key": "21",
       "name": "Miss Fortune",
-      "image": "../assets/champion/Miss Fortune.png"
+      "image": "MissFortune.png"
     },
     {
       "key": "62",
       "name": "Wukong",
-      "image": "../assets/champion/Wukong.png"
+      "image": "MonkeyKing.png"
     },
     {
       "key": "82",
       "name": "Mordekaiser",
-      "image": "../assets/champion/Mordekaiser.png"
+      "image": "Mordekaiser.png"
     },
     {
       "key": "25",
       "name": "Morgana",
-      "image": "../assets/champion/Morgana.png"
+      "image": "Morgana.png"
     },
     {
       "key": "267",
       "name": "Nami",
-      "image": "../assets/champion/Nami.png"
+      "image": "Nami.png"
     },
     {
       "key": "75",
       "name": "Nasus",
-      "image": "../assets/champion/Nasus.png"
+      "image": "Nasus.png"
     },
     {
       "key": "111",
       "name": "Nautilus",
-      "image": "../assets/champion/Nautilus.png"
+      "image": "Nautilus.png"
     },
     {
       "key": "518",
       "name": "Neeko",
-      "image": "../assets/champion/Neeko.png"
+      "image": "Neeko.png"
     },
     {
       "key": "76",
       "name": "Nidalee",
-      "image": "../assets/champion/Nidalee.png"
+      "image": "Nidalee.png"
     },
     {
       "key": "895",
       "name": "Nilah",
-      "image": "../assets/champion/Nilah.png"
+      "image": "Nilah.png"
     },
     {
       "key": "56",
       "name": "Nocturne",
-      "image": "../assets/champion/Nocturne.png"
+      "image": "Nocturne.png"
     },
     {
       "key": "20",
       "name": "Nunu & Willump",
-      "image": "../assets/champion/Nunu & Willump.png"
+      "image": "Nunu.png"
     },
     {
       "key": "2",
       "name": "Olaf",
-      "image": "../assets/champion/Olaf.png"
+      "image": "Olaf.png"
     },
     {
       "key": "61",
       "name": "Orianna",
-      "image": "../assets/champion/Orianna.png"
+      "image": "Orianna.png"
     },
     {
       "key": "516",
       "name": "Ornn",
-      "image": "../assets/champion/Ornn.png"
+      "image": "Ornn.png"
     },
     {
       "key": "80",
       "name": "Pantheon",
-      "image": "../assets/champion/Pantheon.png"
+      "image": "Pantheon.png"
     },
     {
       "key": "78",
       "name": "Poppy",
-      "image": "../assets/champion/Poppy.png"
+      "image": "Poppy.png"
     },
     {
       "key": "555",
       "name": "Pyke",
-      "image": "../assets/champion/Pyke.png"
+      "image": "Pyke.png"
     },
     {
       "key": "246",
       "name": "Qiyana",
-      "image": "../assets/champion/Qiyana.png"
+      "image": "Qiyana.png"
     },
     {
       "key": "133",
       "name": "Quinn",
-      "image": "../assets/champion/Quinn.png"
+      "image": "Quinn.png"
     },
     {
       "key": "497",
       "name": "Rakan",
-      "image": "../assets/champion/Rakan.png"
+      "image": "Rakan.png"
     },
     {
       "key": "33",
       "name": "Rammus",
-      "image": "../assets/champion/Rammus.png"
+      "image": "Rammus.png"
     },
     {
       "key": "421",
       "name": "Rek'Sai",
-      "image": "../assets/champion/Rek'Sai.png"
+      "image": "RekSai.png"
     },
     {
       "key": "526",
       "name": "Rell",
-      "image": "../assets/champion/Rell.png"
+      "image": "Rell.png"
     },
     {
       "key": "888",
       "name": "Renata Glasc",
-      "image": "../assets/champion/Renata Glasc.png"
+      "image": "Renata.png"
     },
     {
       "key": "58",
       "name": "Renekton",
-      "image": "../assets/champion/Renekton.png"
+      "image": "Renekton.png"
     },
     {
       "key": "107",
       "name": "Rengar",
-      "image": "../assets/champion/Rengar.png"
+      "image": "Rengar.png"
     },
     {
       "key": "92",
       "name": "Riven",
-      "image": "../assets/champion/Riven.png"
+      "image": "Riven.png"
     },
     {
       "key": "68",
       "name": "Rumble",
-      "image": "../assets/champion/Rumble.png"
+      "image": "Rumble.png"
     },
     {
       "key": "13",
       "name": "Ryze",
-      "image": "../assets/champion/Ryze.png"
+      "image": "Ryze.png"
     },
     {
       "key": "360",
       "name": "Samira",
-      "image": "../assets/champion/Samira.png"
+      "image": "Samira.png"
     },
     {
       "key": "113",
       "name": "Sejuani",
-      "image": "../assets/champion/Sejuani.png"
+      "image": "Sejuani.png"
     },
     {
       "key": "235",
       "name": "Senna",
-      "image": "../assets/champion/Senna.png"
+      "image": "Senna.png"
     },
     {
       "key": "147",
       "name": "Seraphine",
-      "image": "../assets/champion/Seraphine.png"
+      "image": "Seraphine.png"
     },
     {
       "key": "875",
       "name": "Sett",
-      "image": "../assets/champion/Sett.png"
+      "image": "Sett.png"
     },
     {
       "key": "35",
       "name": "Shaco",
-      "image": "../assets/champion/Shaco.png"
+      "image": "Shaco.png"
     },
     {
       "key": "98",
       "name": "Shen",
-      "image": "../assets/champion/Shen.png"
+      "image": "Shen.png"
     },
     {
       "key": "102",
       "name": "Shyvana",
-      "image": "../assets/champion/Shyvana.png"
+      "image": "Shyvana.png"
     },
     {
       "key": "27",
       "name": "Singed",
-      "image": "../assets/champion/Singed.png"
+      "image": "Singed.png"
     },
     {
       "key": "14",
       "name": "Sion",
-      "image": "../assets/champion/Sion.png"
+      "image": "Sion.png"
     },
     {
       "key": "15",
       "name": "Sivir",
-      "image": "../assets/champion/Sivir.png"
+      "image": "Sivir.png"
     },
     {
       "key": "72",
       "name": "Skarner",
-      "image": "../assets/champion/Skarner.png"
+      "image": "Skarner.png"
     },
     {
       "key": "37",
       "name": "Sona",
-      "image": "../assets/champion/Sona.png"
+      "image": "Sona.png"
     },
     {
       "key": "16",
       "name": "Soraka",
-      "image": "../assets/champion/Soraka.png"
+      "image": "Soraka.png"
     },
     {
       "key": "50",
       "name": "Swain",
-      "image": "../assets/champion/Swain.png"
+      "image": "Swain.png"
     },
     {
       "key": "517",
       "name": "Sylas",
-      "image": "../assets/champion/Sylas.png"
+      "image": "Sylas.png"
     },
     {
       "key": "134",
       "name": "Syndra",
-      "image": "../assets/champion/Syndra.png"
+      "image": "Syndra.png"
     },
     {
       "key": "223",
       "name": "Tahm Kench",
-      "image": "../assets/champion/Tahm Kench.png"
+      "image": "TahmKench.png"
     },
     {
       "key": "163",
       "name": "Taliyah",
-      "image": "../assets/champion/Taliyah.png"
+      "image": "Taliyah.png"
     },
     {
       "key": "91",
       "name": "Talon",
-      "image": "../assets/champion/Talon.png"
+      "image": "Talon.png"
     },
     {
       "key": "44",
       "name": "Taric",
-      "image": "../assets/champion/Taric.png"
+      "image": "Taric.png"
     },
     {
       "key": "17",
       "name": "Teemo",
-      "image": "../assets/champion/Teemo.png"
+      "image": "Teemo.png"
     },
     {
       "key": "412",
       "name": "Thresh",
-      "image": "../assets/champion/Thresh.png"
+      "image": "Thresh.png"
     },
     {
       "key": "18",
       "name": "Tristana",
-      "image": "../assets/champion/Tristana.png"
+      "image": "Tristana.png"
     },
     {
       "key": "48",
       "name": "Trundle",
-      "image": "../assets/champion/Trundle.png"
+      "image": "Trundle.png"
     },
     {
       "key": "23",
       "name": "Tryndamere",
-      "image": "../assets/champion/Tryndamere.png"
+      "image": "Tryndamere.png"
     },
     {
       "key": "4",
       "name": "Twisted Fate",
-      "image": "../assets/champion/Twisted Fate.png"
+      "image": "TwistedFate.png"
     },
     {
       "key": "29",
       "name": "Twitch",
-      "image": "../assets/champion/Twitch.png"
+      "image": "Twitch.png"
     },
     {
       "key": "77",
       "name": "Udyr",
-      "image": "../assets/champion/Udyr.png"
+      "image": "Udyr.png"
     },
     {
       "key": "6",
       "name": "Urgot",
-      "image": "../assets/champion/Urgot.png"
+      "image": "Urgot.png"
     },
     {
       "key": "110",
       "name": "Varus",
-      "image": "../assets/champion/Varus.png"
+      "image": "Varus.png"
     },
     {
       "key": "67",
       "name": "Vayne",
-      "image": "../assets/champion/Vayne.png"
+      "image": "Vayne.png"
     },
     {
       "key": "45",
       "name": "Veigar",
-      "image": "../assets/champion/Veigar.png"
+      "image": "Veigar.png"
     },
     {
       "key": "161",
       "name": "Vel'Koz",
-      "image": "../assets/champion/Vel'Koz.png"
+      "image": "Velkoz.png"
     },
     {
       "key": "711",
       "name": "Vex",
-      "image": "../assets/champion/Vex.png"
+      "image": "Vex.png"
     },
     {
       "key": "254",
       "name": "Vi",
-      "image": "../assets/champion/Vi.png"
+      "image": "Vi.png"
     },
     {
       "key": "234",
       "name": "Viego",
-      "image": "../assets/champion/Viego.png"
+      "image": "Viego.png"
     },
     {
       "key": "112",
       "name": "Viktor",
-      "image": "../assets/champion/Viktor.png"
+      "image": "Viktor.png"
     },
     {
       "key": "8",
       "name": "Vladimir",
-      "image": "../assets/champion/Vladimir.png"
+      "image": "Vladimir.png"
     },
     {
       "key": "106",
       "name": "Volibear",
-      "image": "../assets/champion/Volibear.png"
+      "image": "Volibear.png"
     },
     {
       "key": "19",
       "name": "Warwick",
-      "image": "../assets/champion/Warwick.png"
+      "image": "Warwick.png"
     },
     {
       "key": "498",
       "name": "Xayah",
-      "image": "../assets/champion/Xayah.png"
+      "image": "Xayah.png"
     },
     {
       "key": "101",
       "name": "Xerath",
-      "image": "../assets/champion/Xerath.png"
+      "image": "Xerath.png"
     },
     {
       "key": "5",
       "name": "Xin Zhao",
-      "image": "../assets/champion/Xin Zhao.png"
+      "image": "XinZhao.png"
     },
     {
       "key": "157",
       "name": "Yasuo",
-      "image": "../assets/champion/Yasuo.png"
+      "image": "Yasuo.png"
     },
     {
       "key": "777",
       "name": "Yone",
-      "image": "../assets/champion/Yone.png"
+      "image": "Yone.png"
     },
     {
       "key": "83",
       "name": "Yorick",
-      "image": "../assets/champion/Yorick.png"
+      "image": "Yorick.png"
     },
     {
       "key": "350",
       "name": "Yuumi",
-      "image": "../assets/champion/Yuumi.png"
+      "image": "Yuumi.png"
     },
     {
       "key": "154",
       "name": "Zac",
-      "image": "../assets/champion/Zac.png"
+      "image": "Zac.png"
     },
     {
       "key": "238",
       "name": "Zed",
-      "image": "../assets/champion/Zed.png"
+      "image": "Zed.png"
     },
     {
       "key": "221",
       "name": "Zeri",
-      "image": "../assets/champion/Zeri.png"
+      "image": "Zeri.png"
     },
     {
       "key": "115",
       "name": "Ziggs",
-      "image": "../assets/champion/Ziggs.png"
+      "image": "Ziggs.png"
     },
     {
       "key": "26",
       "name": "Zilean",
-      "image": "../assets/champion/Zilean.png"
+      "image": "Zilean.png"
     },
     {
       "key": "142",
       "name": "Zoe",
-      "image": "../assets/champion/Zoe.png"
+      "image": "Zoe.png"
     },
     {
       "key": "143",
       "name": "Zyra",
-      "image": "../assets/champion/Zyra.png"
+      "image": "Zyra.png"
     }
   ]

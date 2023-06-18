@@ -9,8 +9,7 @@
                 <ul class="nav nav-fill nav-tabs">
                     <router-link class="nav-link" to="/">Home</router-link>
                     <router-link class="nav-link" to="/about">About</router-link>
-                    <router-link class="nav-link" to="/champions">Champions</router-link>
-                    <router-link class="nav-link" to="/items">Items</router-link>
+                  <router-link class="nav-link" to="/champions">Champions</router-link>
                     <router-link class="nav-link" to="/itemsets">Item Sets</router-link>
                 </ul>
             </div>
