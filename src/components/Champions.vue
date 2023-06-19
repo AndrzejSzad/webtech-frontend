@@ -1,14 +1,10 @@
 <template>
 
-  <div class="container" style="border:2px solid black;height: 850px; overflow: auto">
-    <div class="row row-cols-5">
-      <div class= "card" v-for="champion in champions" :key="champion.key">
-          <img :src= "require(`../assets/champion/${champion.image}`)" class="img">
-      </div>
-  </div>
+  <div class="row row-cols-6 g-0">
+    <div v-for="champion in champions" :key="champion.key" class="card bg-black">
+      <img :src="require(`../assets/champion/${champion.image}`)" class="card-img img">
     </div>
-
-
+  </div>
 
 </template>
 
@@ -18,9 +14,16 @@
 import Champions from "../assets/data/champions.json";
 
 export default {
+
   data() {
-    return{
-      champions : Champions
+    return {
+      champions: Champions
+    }
+  },
+  methods: {
+
+    save(champion) {
+      console.log(champion.key);
     }
   }
 };
@@ -28,7 +31,6 @@ export default {
 </script>
 
 <style scoped>
-
 
 
 </style>
