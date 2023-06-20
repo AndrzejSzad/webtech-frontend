@@ -46,13 +46,34 @@
 
       </div>
     </div>
+    <div v-for="block in selectedItemSet.blocks" :key="block.primKey"
+         @click="selectItemBlock(block)">>
+      <div :style="{'min-height': '115px', 'border': block === selectedItemBlock ? '2px solid red' : '1px solid black'}"
+           class="card"
+           style="background-color: #001933">
 
-    <ItemBlock v-for="block in selectedItemSet.blocks" :key="block.primKey" :block="block"
-               :selectedItemBlock="selectedItemBlock"
-               @click="selectItemBlock(block)">
-    </ItemBlock>
+        <div class="card-body">
+
+          <div class="card-header" style="font-size: 25px; color: gold">
+            {{ block.type }}
+            <button class="btn btn-secondary" style="height: 30px; width: 30px; padding:0" type="button">
+              <font-awesome-icon :icon="['fas', 'pencil']" style="font-size: 16px;"/>
+
+            </button>
+            <input v-model="block.type" placeholder="Block Name" />
+
+          </div>
+
+          <div class="row row-cols-auto">
+            <div v-for="item in block.items" :key="item.primKey">
+              <img :alt="item.name" :src="require(`../assets/item/${item.id}.png`)" class="card-img mx-1 my-1">
+            </div>
+          </div>
+        </div>
+      </div>
 
 
+    </div>
     <button class="btn btn-success" style="width: 50px; height:50px;" type="button" @click="addBlock(selectedItemSet)">
       <font-awesome-icon :icon="['fas', 'plus']"/>
     </button>
@@ -67,7 +88,6 @@
 
 <script>
 
-import ItemBlock from "@/components/ItemBlock.vue";
 import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
@@ -81,7 +101,7 @@ export default {
       selectedItemBlock: null
     };
   },
-  components: {FontAwesomeIcon, ItemBlock},
+  components: {FontAwesomeIcon},
   props: ['itemBlocks'],
 
 
