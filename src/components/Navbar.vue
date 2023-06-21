@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand navbar-dark nav-style">
-    <a class="navbar-brand" style="color: #f5ab2c; font-size: 32px; font-weight: bolder; text-shadow:red 0px 0px 10px">Item
+    <a class="navbar-brand" style="color: #f5ab2c; font-weight: bolder; font-size: 5vh; text-shadow: red 0 0 20px;">Item
       Set Creator</a>
     <ul class="nav nav-pills">
       <router-link class="nav-link" to="/">Home</router-link>
@@ -15,9 +15,9 @@
 <style scoped>
 
 .nav-style {
-  font-size: 25px;
-  width: 100%;
+  font-size: 3vh;
   background-color: #001933;
+  height: 10vh;
 }
 
 .nav-pills .nav-link.active {

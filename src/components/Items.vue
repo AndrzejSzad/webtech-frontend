@@ -1,8 +1,8 @@
 <template>
 
-  <div class="row row-cols-6 g-0" style="background-color: #001933">
+  <div class="row row-cols-auto g-0" style="background-color: #001933">
     <div v-for="item in items" :key="item.key" class="card bg-black">
-      <img :src="require(`../assets/item/${item.image}`)" class="card-img">
+      <img :src="require(`../assets/item/${item.image}`)" class="card-img" style="width:4vw;">
     </div>
   </div>
 

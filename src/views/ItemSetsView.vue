@@ -2,13 +2,13 @@
   <div class= "container-fluid" style="background-color: #001933;">
 
     <div class="row">
-      <div class="col fixedColumn" style="direction: rtl;">
+      <div class="col-4 fixedColumn" style="direction: rtl;">
           <champions></champions>
       </div>
-      <div class="col " >
+      <div class="col-4 " >
         <item-set> </item-set>
       </div>
-      <div class="col fixedColumn" >
+      <div class="col-4 fixedColumn" >
         <items> </items>
       </div>
       </div>
@@ -37,7 +37,7 @@ export default {
 <style>
 
 .fixedColumn{
-  height: 875px;
+  height: 100vh;
   overflow: auto;
   position:sticky;
   top:0;

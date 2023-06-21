@@ -1,9 +1,12 @@
 <template>
 
-  <div class="row row-cols-6 g-0">
+  <div class="row row-cols-auto g-0">
     <div v-for="champion in champions" :key="champion.key" class="card bg-black">
-      <img :src="require(`../assets/champion/${champion.image}`)" class="card-img img">
+        <img :src="require(`../assets/champion/${champion.image}`)" class="card-img" style="width:4vw">
     </div>
+
+
+
   </div>
 
 </template>
@@ -31,6 +34,7 @@ export default {
 </script>
 
 <style scoped>
+
 
 
 </style>

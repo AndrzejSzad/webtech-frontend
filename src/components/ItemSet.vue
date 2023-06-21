@@ -1,56 +1,59 @@
 <template>
-  <div class="btn-group" role="group">
-    <div class="btn-group" role="group">
-      <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" style="font-size:25px; height:50px"
+  <div class="btn-group" role="group" style="width: 100%">
+    <div class="btn-group" role="group" style="width: 100%">
+      <button class="btn btn-secondary dropdown-toggle largeBtn" data-bs-toggle="dropdown"
               type="button">
         Browse Itemsets
       </button>
       <ul class="dropdown-menu dropdown-menu-dark">
-        <li v-for="itemset in itemsets" :key="itemset.primkey" class="dropdown-item" @click="selectItemSet(itemset)">
+        <li v-for="itemset in itemsets" :key="itemset.primkey" class="dropdown-item textMed" @click="selectSet(itemset)"  >
           {{ itemset.title }}
         </li>
       </ul>
     </div>
-    <button class="btn btn-success" style="width: 50px; height:50px;" type="button" @click="addItemSet()">
+    <button class="btn btn-success largeBtn" type="button" @click="addSet()" style="max-width: 4vw">
       <font-awesome-icon :icon="['fas', 'plus']"/>
     </button>
 
-    <button class="btn btn-info" style="width: 50px;height:50px;" type="button">
+    <button class="btn btn-info largeBtn" type="button" style="max-width: 4vw">
       <font-awesome-icon :icon="['fas', 'upload']"/>
     </button>
 
 
   </div>
 
-  <div v-if="selectedItemSet" class="container my-3 rounded-5" style="border:5px solid darkgoldenrod;">
+  <div v-if="selectedSet" class="container my-3" style="border: 1vh ridge #daa520;">
     <div class="card-title" style="color:darkgoldenrod; font-weight: bolder; font-size: 25px"> {{
-        selectedItemSet.title
-      }}
+        selectedSet.title
+        }}
 
-      <div class="btn-group" role="group">
-        <button class="btn btn-secondary" style="width: 50px;height:50px;" type="button">
-          <font-awesome-icon :icon="['fas', 'pencil']"/>
+        <div class="btn-group" role="group">
+
+        <button class="btn btn-secondary medBtn" type="button">
+             <span class="align-content-center">
+                <font-awesome-icon :icon="['fas', 'pencil']"/>
+            </span>
+
         </button>
 
-        <button class="btn btn-warning" style="width: 50px;height:50px;" type="button">
+        <button class="btn btn-warning medBtn" type="button">
           <font-awesome-icon :icon="['fas', 'floppy-disk']"/>
         </button>
 
-        <button class="btn btn-info" style="width: 50px;height:50px;" type="button">
+        <button class="btn btn-info medBtn" type="button">
           <font-awesome-icon :icon="['fas', 'download']"/>
         </button>
 
-        <button class="btn btn-danger" style="width: 50px;height:50px;" type="button">
+        <button class="btn btn-danger medBtn" type="button">
           <font-awesome-icon :icon="['far', 'trash-can']"/>
         </button>
 
       </div>
     </div>
-    <div v-for="block in selectedItemSet.blocks" :key="block.primKey"
-         @click="selectItemBlock(block)">>
-      <div :style="{'min-height': '115px', 'border': block === selectedItemBlock ? '2px solid red' : '1px solid black'}"
-           class="card"
-           style="background-color: #001933">
+    <div v-for="block in selectedSet.blocks" :key="block.primKey"
+         @click="selectBlock(block)">>
+      <div :style="{'background-color':'#001933', 'min-height': '115px', 'border': block === selectedBlock ? '2px solid red' : '1px solid black'}"
+           class="card">
 
         <div class="card-body">
 
@@ -74,11 +77,11 @@
 
 
     </div>
-    <button class="btn btn-success" style="width: 50px; height:50px;" type="button" @click="addBlock(selectedItemSet)">
+    <button class="btn btn-success" style="width: 50px; height:50px;" type="button" @click="addBlock(selectedSet)">
       <font-awesome-icon :icon="['fas', 'plus']"/>
     </button>
     <button class="btn btn-danger" style="width: 50px;height:50px;" type="button"
-            @click="removeBlock(selectedItemBlock)">
+            @click="removeBlock(selectedBlock)">
       <font-awesome-icon :icon="['far', 'trash-can']"/>
     </button>
   </div>
@@ -92,44 +95,25 @@ import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const endpoint = process.env.VUE_APP_BACKEND_BASEURL + '/itemsets';
+
 export default {
 
   data() {
     return {
       itemsets: [],
-      selectedItemSet: null,
-      selectedItemBlock: null
+      selectedSet: null,
+      selectedBlock: null
     };
   },
   components: {FontAwesomeIcon},
-  props: ['itemBlocks'],
-
 
   methods: {
 
-    selectItemSet(itemset) {
-      this.selectedItemSet = itemset;
+    selectSet(itemset) {
+      this.selectedSet = itemset;
     },
 
-    selectItemBlock(block) {
-
-      this.selectedItemBlock = block;
-    },
-
-    addBlock() {
-      const newBlock = {
-        type: "New Item Block",
-        items: []
-      }
-      this.selectedItemSet.blocks.push(newBlock);
-      this.saveItemSet();
-    },
-
-    removeBlock(selectedItemBlock) {
-      this.selectedItemSet.blocks.splice(this.selectedItemSet.blocks.indexOf(selectedItemBlock), 1);
-    },
-
-    addItemSet() {
+    addSet() {
       const newItemSet = {
         title: "New Item Set",
         blocks: [{
@@ -138,12 +122,12 @@ export default {
         }]
       }
       this.itemsets.push(newItemSet);
-      this.selectedItemSet = newItemSet;
-      this.saveItemSet();
+      this.selectedSet = newItemSet;
+      this.saveSet();
     },
 
-    saveItemSet() {
-      const toBeSaved = this.selectedItemSet;
+    saveSet() {
+      const toBeSaved = this.selectedSet;
       axios.post(endpoint, toBeSaved)
           .then(response => this.primKey = response.data.primKey)
           .catch(error => {
@@ -151,8 +135,37 @@ export default {
             console.error("There was an error!", error);
           });
 
-    }
+    },
+
+    removeSet(){
+
+    },
+      selectBlock(block) {
+
+          this.selectedBlock = block;
+      },
+
+      addBlock() {
+          const newBlock = {
+              type: "New Item Block",
+              items: []
+          }
+          this.selectedSet.blocks.push(newBlock);
+      },
+
+      removeBlock(selectedItemBlock) {
+          this.selectedSet.blocks.splice(this.selectedSet.blocks.indexOf(selectedItemBlock), 1);
+      },
+
+      addItem(){
+
+      },
+
+      removeItem(){
+
+      }
   },
+
 
   created() {
     axios.get(endpoint)
@@ -163,7 +176,38 @@ export default {
         });
   }
 }
-
-
 </script>
 
+<style scoped>
+
+.largeBtn{
+    height:4vw;
+    min-width: 4vw;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.medBtn{
+    height:3vw;
+    width: 3vw;
+    font-size:1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.smallBtn{
+
+}
+
+.textMed{
+      font-size: 1.2vw;
+
+}
+
+
+
+</style>
