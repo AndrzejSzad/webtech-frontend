@@ -2,7 +2,7 @@
 
   <div class="row row-cols-auto g-0">
     <div v-for="champion in champions" :key="champion.key" class="card bg-black">
-        <img :src="require(`../assets/champion/${champion.image}`)" class="card-img" style="width:4vw">
+        <img :src="require(`../assets/champion/${champion.image}`)" class="card-img" style="width:4vw" @mouseover=console.log(champion.key)>
     </div>
 
 
