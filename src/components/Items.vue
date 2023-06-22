@@ -2,7 +2,7 @@
 
   <div class="row row-cols-auto g-0" style="background-color: #001933">
     <div v-for="item in items" :key="item.key" class="card bg-black">
-      <img :src="require(`../assets/item/${item.image}`)" class="card-img" style="width:4vw;" @mouseover=console.log(item.key)>
+      <img :src="require(`../assets/item/${item.image}`)" class="card-img" alt="{{item.name}}" style="width:4vw;" @mouseover=console.log(item.key)>
     </div>
   </div>
 

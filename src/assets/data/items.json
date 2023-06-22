@@ -1028,21 +1028,6 @@
     }
   },
   {
-    "key": 3111,
-    "name": "Mercury's Treads",
-    "image": "3111.png",
-    "gold": 1100,
-    "tags": [
-      "Boots",
-      "SpellBlock",
-      "Tenacity"
-    ],
-    "stats": {
-      "FlatMovementSpeedMod": 45,
-      "FlatSpellBlockMod": 25
-    }
-  },
-  {
     "key": 3222,
     "name": "Mikael's Blessing",
     "image": "3222.png",

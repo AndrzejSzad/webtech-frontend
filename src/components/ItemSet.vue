@@ -6,7 +6,7 @@
         Browse Itemsets
       </button>
       <ul class="dropdown-menu dropdown-menu-dark">
-        <li v-for="itemset in itemsets" :key="itemset.primkey" class="dropdown-item textMed" @click="selectSet(itemset)"  >
+        <li v-for="itemset in itemsets" :key="itemset.primKey" class="dropdown-item textMed" @click="selectSet(itemset)"  >
           {{ itemset.title }}
         </li>
       </ul>
@@ -21,75 +21,77 @@
 
 
   </div>
-
+  <!-- ItemSet part-->
   <div v-if="selectedSet" class="container my-3" style="border: 1vh ridge #daa520;">
-    <div class="card-title textLg"> {{
-        selectedSet.title
-        }}
-      {{
-        selectedSet.primKey
-      }}
-
-      <champions />
+    <div class="card" style="background-color: #001933; color: darkgoldenrod">
+      <h2 v-if="editSet">
+      <input v-model="selectedSet.title" style="background-color: #07213D; color: darkgoldenrod" @keyup.enter="editSet= !editSet">
+      </h2>
+      <h2 v-else> {{selectedSet.title }}</h2>
 
         <div class="btn-group" role="group">
 
-        <button class="btn btn-secondary medBtn" type="button">
-             <span class="align-content-center">
+        <button class="btn btn-secondary medBtn"
+        @click="editSet = !editSet ">
                 <font-awesome-icon :icon="['fas', 'pencil']"/>
-            </span>
-
         </button>
 
-        <button class="btn btn-warning medBtn" type="button">
+        <button class="btn btn-warning medBtn" >
           <font-awesome-icon :icon="['fas', 'floppy-disk']" @click="saveSet()"/>
         </button>
 
-        <button class="btn btn-info medBtn" type="button">
+        <button class="btn btn-info medBtn"  @click="exportSet(selectedSet)">
           <font-awesome-icon :icon="['fas', 'download']"/>
         </button>
 
-        <button class="btn btn-danger medBtn" type="button" @click="removeSet(selectedSet.primKey)">
+        <button class="btn btn-danger medBtn"  @click="removeSet(selectedSet.primKey)">
           <font-awesome-icon :icon="['far', 'trash-can']"/>
         </button>
 
-
       </div>
     </div>
+    <!-- ItemBlock part-->
     <div v-for="block in selectedSet.blocks" :key="block.primKey"
          @click="selectBlock(block)">
-      <div :style="{'background-color':'#07213D', 'min-height': '115px', 'border': block === selectedBlock ? '2px solid red' : '1px solid black'}"
-           class="card">
+      <!--Temporary Solution, for editing items, TODO-->
+      <div class="card" :style="{'background-color':'#07213D', 'min-height': '115px', 'border': block === selectedBlock
+           ? '2px solid #DC143C' : '1px solid black'}">
 
-        <div class="card-body">
 
-          <div class="card-header textMed">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <div class="textMed" v-if="block!==selectedBlock || !editBlock">
             {{ block.type }}
-            <button class="btn btn-secondary smallBtn" type="button">
-              <font-awesome-icon :icon="['fas', 'pencil']" />
-
-            </button>
-            <input v-model="block.type" placeholder="Block Name" />
-
           </div>
+          <div  class="textMed" v-else>
+            <input v-model="block.type" style="background-color: #0B325B; color: darkgoldenrod" @keyup.enter="editBlock= !editBlock">
+          </div>
+          <button class="btn btn-secondary smallBtn align-items-center"
+                  @click="editBlock = !editBlock ">
+            <font-awesome-icon :icon="['fas', 'pencil']" />
 
+          </button>
+        </div>
+
+          <!-- Item part-->
           <div class="row row-cols-auto">
             <div v-for="item in block.items" :key="item.primKey">
               <img :alt="item.name" :src="require(`../assets/item/${item.id}.png`)" class="card-img mx-1 my-1">
             </div>
           </div>
-        </div>
+
       </div>
 
     </div>
-    <button class="btn btn-success medBtn"  type="button" @click="addBlock(selectedSet)">
+    <button class="btn btn-success medBtn "  @click="addBlock(selectedSet)">
       <font-awesome-icon :icon="['fas', 'plus']"/>
     </button>
-    <button class="btn btn-danger medBtn" type="submit"
-            @click="removeBlock(selectedBlock)">
+    <button class="btn btn-danger medBtn "
+            @click="removeBlock(selectedBlock)" :disabled="!selectedBlock">
       <font-awesome-icon :icon="['far', 'trash-can']"/>
     </button>
+
   </div>
+
 
 </template>
 
@@ -98,7 +100,10 @@
 
 import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {ref} from 'vue';
 const endpoint = process.env.VUE_APP_BACKEND_BASEURL + '/itemsets';
+let editSet = ref(false);
+let editBlock = ref(false);
 
 export default {
 
@@ -106,7 +111,9 @@ export default {
     return {
       itemsets: [],
       selectedSet: null,
-      selectedBlock: null
+      selectedBlock: null,
+      editSet,
+      editBlock
     };
   },
   components: {FontAwesomeIcon},
@@ -134,13 +141,23 @@ export default {
       axios.post(endpoint, toBeSaved)
           .then(response => this.primKey = response.data.primKey)
           .catch(error => {
-            this.errorMessage = error.message;
             console.error("There was an error saving the ItemSet!", error);
           });
 
     },
 
-    saveFile() {
+    exportSet(set) {
+
+      const blob = new Blob([JSON.stringify(set)]);
+      const href = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = href;
+      link.setAttribute('download', set.title + '.json');
+      document.body.appendChild(link);
+      link.click();
+      URL.revokeObjectURL(href);
+      document.body.removeChild(link);
+
 
     },
 
@@ -155,6 +172,7 @@ export default {
       window.location.reload()
 
     },
+
       selectBlock(block) {
 
           this.selectedBlock = block;
@@ -209,9 +227,9 @@ export default {
     height:3vw;
     width: 3vw;
     font-size:1.5vw;
-    display: flex;
     align-items: center;
     justify-content: center;
+
 
 }
 
@@ -220,8 +238,7 @@ export default {
   width: 2vw;
   font-size:1vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
+
 
 
 }
@@ -231,10 +248,7 @@ export default {
       font-size: 1.2vw;
 }
 
-.textLg{
-  color:darkgoldenrod;
-  font-size: 1.5vw;
-}
+
 
 
 
