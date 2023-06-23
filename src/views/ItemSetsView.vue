@@ -26,6 +26,7 @@ import Items from "@/components/Items.vue";
 import ItemSet from "@/components/ItemSet.vue";
 
 export default {
+
   components: {Items, Champions, ItemSet},
 
   methods:{

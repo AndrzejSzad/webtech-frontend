@@ -1,4 +1,6 @@
 <template>
+    <div>
+
   <div class="btn-group" role="group" style="width: 100%">
     <div class="btn-group" role="group" style="width: 100%">
       <button class="btn btn-secondary dropdown-toggle largeBtn" data-bs-toggle="dropdown"
@@ -75,7 +77,9 @@
           <!-- Item part-->
           <div class="row row-cols-auto">
             <div v-for="item in block.items" :key="item.primKey">
-              <img :alt="item.name" :src="require(`../assets/item/${item.id}.png`)" class="card-img mx-1 my-1">
+              <img :alt="item.name" :src="require(`../assets/item/${item.id}.png`)" class="card-img mx-1 my-1"
+              style="width: 4vw" @click="removeItem(block,item)" >
+
             </div>
           </div>
 
@@ -92,7 +96,7 @@
 
   </div>
 
-
+    </div>
 </template>
 
 <script>
@@ -101,10 +105,10 @@
 import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {ref} from 'vue';
+
 const endpoint = process.env.VUE_APP_BACKEND_BASEURL + '/itemsets';
 let editSet = ref(false);
 let editBlock = ref(false);
-
 export default {
 
   data() {
@@ -113,9 +117,11 @@ export default {
       selectedSet: null,
       selectedBlock: null,
       editSet,
-      editBlock
-    };
+      editBlock,
+
+    }
   },
+
   components: {FontAwesomeIcon},
 
   methods: {
@@ -123,6 +129,7 @@ export default {
     selectSet(itemset) {
       this.selectedSet = itemset;
     },
+
 
     addSet() {
       const newItemSet = {
@@ -137,12 +144,15 @@ export default {
     },
 
     saveSet() {
-      const toBeSaved = this.selectedSet;
-      axios.post(endpoint, toBeSaved)
-          .then(response => this.primKey = response.data.primKey)
+        console.log("Running save method");
+      axios.post(endpoint, this.selectedSet)
+          .then(response => {this.primKey = response.data.primKey;
+        console.log("Saved " + this.selectedSet.title);
+    })
           .catch(error => {
             console.error("There was an error saving the ItemSet!", error);
           });
+
 
     },
 
@@ -161,17 +171,17 @@ export default {
 
     },
 
-    removeSet(key){
-      axios.delete(endpoint + "/" + key)
-          .then(function (response) {
-            console.log(response)
-          })
-          .catch(function (error) {
-            console.log(error)
-          })
-      window.location.reload()
+      removeSet(key) {
+          axios
+              .delete(endpoint + "/" + key)
+              .then((response) => {
+                  console.log(response);
+              })
+              .catch((error) => {
+                  console.log(error);
+              });
+      },
 
-    },
 
       selectBlock(block) {
 
@@ -188,19 +198,20 @@ export default {
 
       removeBlock(block) {
           this.selectedSet.blocks.splice(this.selectedSet.blocks.indexOf(block), 1);
-          this.selectedBlock=null;
       },
 
       addItem(){
 
       },
+      selectItem(item) {
 
-      removeItem(){
+          this.selectedItem = item;
+      },
 
+      removeItem(block, item) {
+        block.items.splice(block.items.indexOf(item),1);
       }
-
 },
-
   created() {
     axios.get(endpoint)
         .then(response => this.itemsets = response.data)
@@ -237,7 +248,9 @@ export default {
   height:2vw;
   width: 2vw;
   font-size:1vw;
-  display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 
