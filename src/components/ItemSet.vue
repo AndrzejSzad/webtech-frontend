@@ -1,6 +1,6 @@
 <template>
     <div>
-
+      <!-- Add file drag n drop instead of button, TODO-->
   <div class="btn-group" role="group" style="width: 100%">
     <div class="btn-group" role="group" style="width: 100%">
       <button class="btn btn-secondary dropdown-toggle largeBtn" data-bs-toggle="dropdown"
@@ -8,7 +8,7 @@
         Browse Itemsets
       </button>
       <ul class="dropdown-menu dropdown-menu-dark">
-        <li v-for="itemset in itemsets" :key="itemset.primKey" class="dropdown-item textMed" @click="selectSet(itemset)"  >
+        <li v-for="itemset in itemsets" :key="itemset.primKey" class="dropdown-item textMed" @click="selectSet(itemset)">
           {{ itemset.title }}
         </li>
       </ul>
@@ -16,7 +16,6 @@
     <button class="btn btn-success largeBtn" type="button" @click="addSet()" style="max-width: 4vw">
       <font-awesome-icon :icon="['fas', 'plus']"/>
     </button>
-
     <button class="btn btn-info largeBtn" type="button" @click="exportSet(selectedSet)" style="max-width: 4vw">
       <font-awesome-icon :icon="['fas', 'upload']"/>
     </button>
@@ -24,7 +23,10 @@
 
   </div>
   <!-- ItemSet part-->
-  <div v-if="selectedSet" class="container my-3" style="border: 1vh ridge #daa520;">
+  <div v-if="selectedSet" class="container my-3 " style="border: 1vh ridge #daa520;">
+
+    <h2 style="color:white">{{selectedSet.associatedChampions}}</h2>
+
     <div class="card" style="background-color: #001933; color: darkgoldenrod">
       <h2 v-if="editSet">
       <input v-model="selectedSet.title" style="background-color: #07213D; color: darkgoldenrod" @keyup.enter="editSet= !editSet">
@@ -54,11 +56,10 @@
     </div>
     <!-- ItemBlock part-->
     <div v-for="block in selectedSet.blocks" :key="block.primKey"
-         @click="selectBlock(block)">
+         @click="this.selectedBlock = block;" @dragover="this.selectedBlock=block;" @dragenter.prevent @dragover.prevent @drop="onDrop($event)">
       <!--Temporary Solution, for editing items, TODO-->
-      <div class="card" :style="{'background-color':'#07213D', 'min-height': '115px', 'border': block === selectedBlock
-           ? '2px solid #DC143C' : '1px solid black'}">
-
+      <div class="card" :style="{'background-color':'#07213D', 'min-height': '16vh', 'border': block === selectedBlock
+           ? '2px solid #DC143C' : '1px solid black'}" >
 
         <div class="card-header d-flex justify-content-between align-items-center">
           <div class="textMed" v-if="block!==selectedBlock || !editBlock">
@@ -73,19 +74,17 @@
 
           </button>
         </div>
-
           <!-- Item part-->
-          <div class="row row-cols-auto">
+          <div class="row row-cols-auto" style="margin-top: 2vh;margin-left: 2vh; margin-right: 2vh; ">
             <div v-for="item in block.items" :key="item.primKey">
-              <img :alt="item.name" :src="require(`../assets/item/${item.id}.png`)" class="card-img mx-1 my-1"
-              style="width: 4vw" @click="removeItem(block,item)" >
-
+              <img :alt="item.name" :src="require(`../assets/item/${item.id}.png`)" class="card-img"
+              style="width: 3.2vw; margin-bottom: 2vh; align-content: center" @click="removeItem(block,item)" >
             </div>
           </div>
-
+          </div>
       </div>
 
-    </div>
+
     <button class="btn btn-success medBtn "  @click="addBlock(selectedSet)">
       <font-awesome-icon :icon="['fas', 'plus']"/>
     </button>
@@ -144,11 +143,12 @@ export default {
     },
 
     saveSet() {
-        console.log("Running save method");
+
       axios.post(endpoint, this.selectedSet)
           .then(response => {this.primKey = response.data.primKey;
-        console.log("Saved " + this.selectedSet.title);
-    })
+      console.error("Saved ItemSet");
+          })
+
           .catch(error => {
             console.error("There was an error saving the ItemSet!", error);
           });
@@ -171,22 +171,17 @@ export default {
 
     },
 
-      removeSet(key) {
-          axios
-              .delete(endpoint + "/" + key)
-              .then((response) => {
-                  console.log(response);
-              })
-              .catch((error) => {
-                  console.log(error);
-              });
-      },
+    removeSet(key) {
+      axios.delete(endpoint + "/" + key)
+          .then(function (response) {
+            console.log(response)
+          })
+          .catch(function (error) {
+            console.log(error)
+          })
+    },
 
 
-      selectBlock(block) {
-
-          this.selectedBlock = block;
-      },
 
       addBlock() {
           const newBlock = {
@@ -198,15 +193,25 @@ export default {
 
       removeBlock(block) {
           this.selectedSet.blocks.splice(this.selectedSet.blocks.indexOf(block), 1);
+          this.selectedBlock=null;
       },
 
-      addItem(){
+      addItem(key){
+        const newItem = {
+          id:key,
+          count:1
+        }
 
+        this.selectedBlock.items.push(newItem);
       },
-      selectItem(item) {
 
-          this.selectedItem = item;
-      },
+    onDrop(event) {
+      const key  = event.dataTransfer.getData('key');
+      if(key){
+        console.log("Dropped item ID:", key);
+        this.addItem(key);
+      }
+    },
 
       removeItem(block, item) {
         block.items.splice(block.items.indexOf(item),1);
