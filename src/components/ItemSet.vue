@@ -25,7 +25,6 @@
   <!-- ItemSet part-->
   <div v-if="selectedSet" class="container my-3 " style="border: 1vh ridge #daa520;">
 
-    <h2 style="color:white">{{selectedSet.associatedChampions}}</h2>
 
     <div class="card" style="background-color: #001933; color: darkgoldenrod">
       <h2 v-if="editSet">
@@ -58,8 +57,9 @@
     <div v-for="block in selectedSet.blocks" :key="block.primKey"
          @click="this.selectedBlock = block;" @dragover="this.selectedBlock=block;" @dragenter.prevent @dragover.prevent @drop="onDrop($event)">
       <!--Temporary Solution, for editing items, TODO-->
-      <div class="card" :style="{'background-color':'#07213D', 'min-height': '16vh', 'border': block === selectedBlock
-           ? '2px solid #DC143C' : '1px solid black'}" >
+      <div class="card" :style=" block === selectedBlock
+           ? {'transform': 'scale(1.05)',
+  'box-shadow': '0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06)', 'background-color':'#08274A', 'min-height': '16vh','border':'2px solid black'} : {'background-color':'#07213D', 'min-height': '16vh', 'border':'1px solid black'}" >
 
         <div class="card-header d-flex justify-content-between align-items-center">
           <div class="textMed" v-if="block!==selectedBlock || !editBlock">
@@ -175,6 +175,7 @@ export default {
       axios.delete(endpoint + "/" + key)
           .then(function (response) {
             console.log(response)
+              location.reload();
           })
           .catch(function (error) {
             console.log(error)
@@ -265,9 +266,6 @@ export default {
       color:darkgoldenrod;
       font-size: 1.2vw;
 }
-
-
-
 
 
 </style>
