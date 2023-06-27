@@ -4,7 +4,7 @@
     <h2>{{associateChampions}}</h2>
     <button class="btn-danger" @click="receive($event)"></button>
     <div v-for="champion in champions" :key="champion.key" class="card bg-black" >
-        <img :src="require(`../assets/champion/${champion.image}`)" class="card-img" alt="{{champion.name}}" style="width:4vw" draggable="false">
+        <img :src="require(`../assets/champion/${champion.image}`)" class="card-img" alt="{{champion.name}}" style="width:4vw" @click="changeColor($event)" draggable="false">
     </div>
 
 
@@ -30,6 +30,9 @@ export default {
     }
   },
   methods: {
+    changeColor(event) {
+      event.target.style.filter = 'brightness(150%) saturate(200%) hue-rotate(180deg)';
+    }
   }
 };
 
