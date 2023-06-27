@@ -56,10 +56,9 @@
     <!-- ItemBlock part-->
     <div v-for="block in selectedSet.blocks" :key="block.primKey"
          @click="this.selectedBlock = block;" @dragover="this.selectedBlock=block;" @dragenter.prevent @dragover.prevent @drop="onDrop($event)">
-      <!--Temporary Solution, for editing items, TODO-->
-      <div class="card" :style=" block === selectedBlock
-           ? {'transform': 'scale(1.05)',
-  'box-shadow': '0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06)', 'background-color':'#08274A', 'min-height': '16vh','border':'2px solid black'} : {'background-color':'#07213D', 'min-height': '16vh', 'border':'1px solid black'}" >
+      <!--Temporary Solution, for editing items, saving needs to be bugfixed TODO-->
+      <div class="card my-3" style="background-color: #07213D; min-height: 16vh; border: 1px solid black" :style=" block === selectedBlock
+           ? {'transform': 'scale(1.05)','background-color':'#08274A', 'border':'2px solid black'}:{}" >
 
         <div class="card-header d-flex justify-content-between align-items-center">
           <div class="textMed" v-if="block!==selectedBlock || !editBlock">
