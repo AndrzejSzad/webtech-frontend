@@ -1,24 +1,19 @@
 <template>
     <div>
-      <!-- Add file drag n drop instead of button, TODO-->
+  <!--Rewrite section for readability TODO-->
   <div class="btn-group" role="group" style="width: 100%">
-    <div class="btn-group" role="group" style="width: 100%">
-      <button class="btn btn-secondary dropdown-toggle largeBtn" data-bs-toggle="dropdown"
-              type="button" href>
-        Browse Item Sets
-      </button>
-      <ul class="dropdown-menu dropdown-menu-dark">
-        <li v-for="itemset in itemsets" :key="itemset.primKey" class="dropdown-item textMed" @click="selectSet(itemset)">
-          {{ itemset.title }}
-        </li>
-      </ul>
-    </div>
-    <button class="btn btn-success largeBtn" type="button" @click="addSet()" style="max-width: 4vw">
+      <Dropdown>
+          <li v-for="itemset in itemsets" :key="itemset.primKey" class="dropdown-item textMed" @click="selectSet(itemset)">
+              {{ itemset.title }}
+          </li>
+      </Dropdown>
+    <LargeButton @click="addSet()">
       <font-awesome-icon :icon="['fas', 'plus']"/>
-    </button>
-    <button class="btn btn-info largeBtn" type="button" style="max-width: 4vw">
-      <font-awesome-icon :icon="['fas', 'upload']"/>
-    </button>
+    </LargeButton>
+      <!-- remove button and add drag n drop TODO-->
+      <LargeButton>
+          <font-awesome-icon :icon="['fas', 'upload']"/>
+      </LargeButton>
 
 
   </div>
@@ -115,6 +110,8 @@
 import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {ref} from 'vue';
+import LargeButton from "@/components/LargeButton.vue";
+import Dropdown from "@/components/Dropdown.vue";
 
 const endpoint = process.env.VUE_APP_BACKEND_BASEURL + '/itemsets';
 let editSet = ref(false);
@@ -133,7 +130,7 @@ export default {
     }
   },
 
-  components: {FontAwesomeIcon},
+  components: {Dropdown, LargeButton, FontAwesomeIcon},
 
   methods: {
 
@@ -263,14 +260,7 @@ export default {
 
 <style scoped>
 
-.largeBtn{
-    height:4vw;
-    min-width: 4vw;
-    font-size: 1.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .medBtn{
     height:3vw;
