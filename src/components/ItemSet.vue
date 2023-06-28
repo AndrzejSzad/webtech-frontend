@@ -5,7 +5,7 @@
     <div class="btn-group" role="group" style="width: 100%">
       <button class="btn btn-secondary dropdown-toggle largeBtn" data-bs-toggle="dropdown"
               type="button" href>
-        Browse Itemsets
+        Browse Item Sets
       </button>
       <ul class="dropdown-menu dropdown-menu-dark">
         <li v-for="itemset in itemsets" :key="itemset.primKey" class="dropdown-item textMed" @click="selectSet(itemset)">
@@ -16,7 +16,7 @@
     <button class="btn btn-success largeBtn" type="button" @click="addSet()" style="max-width: 4vw">
       <font-awesome-icon :icon="['fas', 'plus']"/>
     </button>
-    <button class="btn btn-info largeBtn" type="button" @click="exportSet(selectedSet)" style="max-width: 4vw">
+    <button class="btn btn-info largeBtn" type="button" style="max-width: 4vw">
       <font-awesome-icon :icon="['fas', 'upload']"/>
     </button>
 
@@ -54,7 +54,8 @@
         <div>
             <h5   >Item Set should apply to:
 
-                <img :src="require('../assets/maps/11.png')" class="img"   alt="Summoner's Rift" :style="{'width': '5vw','filter' : greyOutMap(11)}"
+                <img :src="require('../assets/maps/11.png')" class="img"   alt="Summoner's Rift" :style="{'width': '5vw','filter' : greyOutMap
+                (11)}"
                 @click="selectMaps(11)">
                 <img :src="require('../assets/maps/12.png')" class="img"   alt="Howling Abyss"  :style="{'width': '5vw','filter' : greyOutMap
                 (12)}"
@@ -69,8 +70,7 @@
     <div v-for="block in selectedSet.blocks" :key="block.primKey"
          @click="this.selectedBlock = block;" @dragover="this.selectedBlock=block;" @dragenter.prevent @dragover.prevent @drop="onDrop($event)">
       <!--Temporary Solution, for editing items, saving needs to be bugfixed TODO-->
-      <div class="card my-3" style="background-color: #07213D; min-height: 16vh; border: 1px solid black" :style=" block === selectedBlock
-           ? {'transform': 'scale(1.05)','background-color':'#08274A', 'border':'2px solid black'}:{}" >
+      <div class="card my-3" :style="{'min-height': '16vh', 'border': '1px solid black', ...highlightSelectedBlock(block)}">
 
         <div class="card-header d-flex justify-content-between align-items-center">
           <div class="textMed" v-if="block!==selectedBlock || !editBlock">
@@ -123,7 +123,8 @@ export default {
 
   data() {
     return {
-      itemsets: [],
+      itemsets: [
+      ],
       selectedSet: null,
       selectedBlock: null,
       editSet,
@@ -144,6 +145,8 @@ export default {
     addSet() {
       const newItemSet = {
         title: "New Item Set",
+          associatedMaps:[],
+          associatedChampions:[],
         blocks: [{
           type: "New Item Block",
           items: []
@@ -154,7 +157,7 @@ export default {
     },
 
     saveSet() {
-
+        console.log("Entering Save Method");
       axios.post(endpoint, this.selectedSet)
           .then(response => {this.primKey = response.data.primKey;
       console.error("Saved ItemSet");
@@ -182,6 +185,7 @@ export default {
 
     },
 
+      //Remove a set, if it isn't saved in the database yet. TODO
     removeSet(key) {
       axios.delete(endpoint + "/" + key)
           .then(function (response) {
@@ -205,6 +209,12 @@ export default {
       },
       greyOutMap(key) {
           return this.selectedSet.associatedMaps.indexOf(key)!==-1 ? '' : 'brightness(30%)';
+      },
+
+      highlightSelectedBlock(block){
+         return block === this.selectedBlock ? {'transform': 'scale(1.05)','background-color':'#08274A', 'border':'2px solid black'}
+             : {'background-color': '#07213D'};
+
       },
 
       addBlock() {
@@ -245,7 +255,6 @@ export default {
     axios.get(endpoint)
         .then(response => this.itemsets = response.data)
         .catch(error => {
-          this.errorMessage = error.message;
           console.error("There was an error loading the ItemSets!", error);
         });
   }
