@@ -25,7 +25,6 @@
   <!-- ItemSet part-->
   <div v-if="selectedSet" class="container my-3 " style="border: 1vh ridge #daa520;">
 
-
     <div class="card" style="background-color: #001933; color: darkgoldenrod">
       <h2 v-if="editSet">
       <input v-model="selectedSet.title" style="background-color: #07213D; color: darkgoldenrod" @keyup.enter="editSet= !editSet">
@@ -52,6 +51,19 @@
         </button>
 
       </div>
+        <div>
+            <h5   >Item Set should apply to:
+
+                <img :src="require('../assets/maps/11.png')" class="img"   alt="Summoner's Rift" :style="{'width': '5vw','filter' : greyOutMap(11)}"
+                @click="selectMaps(11)">
+                <img :src="require('../assets/maps/12.png')" class="img"   alt="Howling Abyss"  :style="{'width': '5vw','filter' : greyOutMap
+                (12)}"
+                     @click="selectMaps(12)">
+
+            </h5>
+
+
+        </div>
     </div>
     <!-- ItemBlock part-->
     <div v-for="block in selectedSet.blocks" :key="block.primKey"
@@ -181,7 +193,19 @@ export default {
           })
     },
 
-
+      selectMaps(key){
+          const idx = this.selectedSet.associatedMaps.indexOf(key);
+          if(idx!==-1){
+              this.selectedSet.associatedMaps.splice(idx,1);
+              console.log(this.selectedSet.associatedMaps);
+              return;
+          }
+          this.selectedSet.associatedMaps.push(key);
+          console.log(this.selectedSet.associatedMaps);
+      },
+      greyOutMap(key) {
+          return this.selectedSet.associatedMaps.indexOf(key)!==-1 ? '' : 'brightness(30%)';
+      },
 
       addBlock() {
           const newBlock = {
