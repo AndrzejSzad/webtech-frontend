@@ -1,7 +1,8 @@
 <template>
 
+  <input type="text" v-model="search">
   <div class="row row-cols-auto g-0">
-    <div v-for="champion in champions" :key="champion.key">
+    <div v-for="champion in filteredChampions" :key="champion.key">
       <div class="card" :style="associatedChampions.indexOf(champion.key) !== -1 ? {'background-color' :'#00FF00'} : {'background-color' : '#000000'}" @click="selectChamp(champion.key)">
       <img :src="require(`../assets/champion/${champion.image}`)" class="card-img"   alt="{{champion.name}}" style="width:4vw;">
       </div>
@@ -22,10 +23,17 @@ export default {
     return {
       champions: Champions,
       //placeholder
-      associatedChampions: []
+      associatedChampions: [],
+        search : '',
 
     }
   },
+    computed:{
+
+      filteredChampions(){
+          return this.champions.filter(champion => champion.name.includes(this.search))
+      }
+    },
   methods: {
 
     selectChamp(key){

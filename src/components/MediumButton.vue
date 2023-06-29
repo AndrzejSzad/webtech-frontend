@@ -1,6 +1,8 @@
+
+
 <template>
 
-    <button class="btn largeBtn btn-link">
+    <button class="btn medBtn btn-link">
         <slot></slot>
     </button>
 
@@ -12,18 +14,24 @@
 
 <style scoped>
 
-.largeBtn{
-    height:4vw;
-    max-width: 4vw;
-    font-size: 1.5vw;
+.btn{
+    height:3vw;
+    width: 3vw;
     color: darkgoldenrod;
-    display: flex;
+    font-size:1.5vw;
     align-items: center;
     justify-content: center;
+    outline:none;
 }
 
-.btn:hover{
+.btn:hover,
+.btn:focus{
     color:gold !important;
 }
+
+.btn:disabled{
+    color:grey;
+}
+
 
 </style>

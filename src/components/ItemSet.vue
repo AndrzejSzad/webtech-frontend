@@ -2,63 +2,57 @@
     <div>
   <!--Rewrite section for readability TODO-->
   <div class="btn-group" role="group" style="width: 100%">
-      <Dropdown>
+      <dropdown>
           <li v-for="itemset in itemsets" :key="itemset.primKey" class="dropdown-item textMed" @click="selectSet(itemset)">
               {{ itemset.title }}
           </li>
-      </Dropdown>
-    <LargeButton @click="addSet()">
+      </dropdown>
+    <large-button @click="addSet()" title="Add new Item Set">
       <font-awesome-icon :icon="['fas', 'plus']"/>
-    </LargeButton>
+    </large-button>
       <!-- remove button and add drag n drop TODO-->
-      <LargeButton>
+      <large-button>
           <font-awesome-icon :icon="['fas', 'upload']"/>
-      </LargeButton>
+      </large-button>
 
 
   </div>
   <!-- ItemSet part-->
   <div v-if="selectedSet" class="container my-3 " style="border: 1vh ridge #daa520;">
 
-    <div class="card" style="background-color: #001933; color: darkgoldenrod">
+    <div class="card" style="border:none; background-color: #001933; color: darkgoldenrod">
       <h2 v-if="editSet">
       <input v-model="selectedSet.title" style="background-color: #07213D; color: darkgoldenrod" @keyup.enter="editSet= !editSet">
       </h2>
       <h2 v-else> {{selectedSet.title }}</h2>
 
         <div class="btn-group" role="group">
-
-        <button class="btn btn-secondary medBtn"
-        @click="editSet = !editSet ">
+        <medium-button @click="editSet = !editSet " title="Edit Item Set name">
                 <font-awesome-icon :icon="['fas', 'pencil']"/>
-        </button>
+        </medium-button>
 
-        <button class="btn btn-warning medBtn" >
-          <font-awesome-icon :icon="['fas', 'floppy-disk']" @click="saveSet()"/>
-        </button>
+        <medium-button @click="saveSet()" title="Save Item Set">
+          <font-awesome-icon :icon="['fas', 'floppy-disk']"/>
+        </medium-button>
 
-        <button class="btn btn-info medBtn"  @click="exportSet(selectedSet)">
+        <medium-button @click="exportSet(selectedSet)" title="Export Item Set">
           <font-awesome-icon :icon="['fas', 'download']"/>
-        </button>
+        </medium-button>
 
-        <button class="btn btn-danger medBtn"  @click="removeSet(selectedSet.primKey)">
+        <medium-button @click="removeSet(selectedSet.primKey)" title="Delete Item Set">
           <font-awesome-icon :icon="['far', 'trash-can']"/>
-        </button>
-
+        </medium-button>
       </div>
         <div>
+            <hr/>
             <h5   >Item Set should apply to:
-
-                <img :src="require('../assets/maps/11.png')" class="img"   alt="Summoner's Rift" :style="{'width': '5vw','filter' : greyOutMap
+                <img :src="require('../assets/maps/11.png')" class="img" alt="SRift" title="Summoner's Rift" :style="{'width': '5vw','filter' : greyOutMap
                 (11)}"
                 @click="selectMaps(11)">
-                <img :src="require('../assets/maps/12.png')" class="img"   alt="Howling Abyss"  :style="{'width': '5vw','filter' : greyOutMap
+                <img :src="require('../assets/maps/12.png')" class="img" alt="HA" title="Howling Abyss"  :style="{'width': '5vw','filter' : greyOutMap
                 (12)}"
                      @click="selectMaps(12)">
-
             </h5>
-
-
         </div>
     </div>
     <!-- ItemBlock part-->
@@ -74,11 +68,10 @@
           <div  class="textMed" v-else>
             <input v-model="block.type" style="background-color: #0B325B; color: darkgoldenrod" @keyup.enter="editBlock= !editBlock">
           </div>
-          <button class="btn btn-secondary smallBtn align-items-center"
-                  @click="editBlock = !editBlock ">
+          <medium-button
+                  @click="editBlock = !editBlock" title="Edit Item Block name">
             <font-awesome-icon :icon="['fas', 'pencil']" />
-
-          </button>
+          </medium-button>
         </div>
           <!-- Item part-->
           <div class="row row-cols-auto" style="margin-top: 2vh;margin-left: 2vh; margin-right: 2vh; ">
@@ -91,16 +84,15 @@
       </div>
 
 
-    <button class="btn btn-success medBtn "  @click="addBlock(selectedSet)">
+    <medium-button @click="addBlock(selectedSet)" title="Add new Item Block">
       <font-awesome-icon :icon="['fas', 'plus']"/>
-    </button>
-    <button class="btn btn-danger medBtn "
-            @click="removeBlock(selectedBlock)" :disabled="!selectedBlock">
+    </medium-button>
+    <medium-button
+            @click="removeBlock(selectedBlock)" :disabled="!selectedBlock" title="Remove Item Block">
       <font-awesome-icon :icon="['far', 'trash-can']"/>
-    </button>
+    </medium-button>
 
   </div>
-
     </div>
 </template>
 
@@ -112,6 +104,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {ref} from 'vue';
 import LargeButton from "@/components/LargeButton.vue";
 import Dropdown from "@/components/Dropdown.vue";
+import MediumButton from "@/components/MediumButton.vue";
 
 const endpoint = process.env.VUE_APP_BACKEND_BASEURL + '/itemsets';
 let editSet = ref(false);
@@ -130,7 +123,7 @@ export default {
     }
   },
 
-  components: {Dropdown, LargeButton, FontAwesomeIcon},
+  components: {MediumButton, Dropdown, LargeButton, FontAwesomeIcon},
 
   methods: {
 
@@ -260,27 +253,10 @@ export default {
 
 <style scoped>
 
-
-
-.medBtn{
-    height:3vw;
-    width: 3vw;
-    font-size:1.5vw;
-    align-items: center;
-    justify-content: center;
-
-
-}
-
-.smallBtn{
-  height:2vw;
-  width: 2vw;
-  font-size:1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+hr{
+    border: 2px solid darkgoldenrod;
+    border-radius: 2px;
+    opacity: 100%;
 
 }
 
