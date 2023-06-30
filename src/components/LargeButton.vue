@@ -15,7 +15,7 @@
 .largeBtn{
     height:4vw;
     max-width: 4vw;
-    font-size: 1.5vw;
+    font-size: 2vw;
     color: darkgoldenrod;
     display: flex;
     align-items: center;

@@ -59,7 +59,7 @@
     <div v-for="block in selectedSet.blocks" :key="block.primKey"
          @click="this.selectedBlock = block;" @dragover="this.selectedBlock=block;" @dragenter.prevent @dragover.prevent @drop="onDrop($event)">
       <!--Temporary Solution, for editing items, saving needs to be bugfixed TODO-->
-      <div class="card my-3" :style="{'min-height': '16vh', 'border': '1px solid black', ...highlightSelectedBlock(block)}">
+      <div class="card my-3" :style="{'min-height': '20vh', 'border': '1px solid black', ...highlightSelectedBlock(block)}">
 
         <div class="card-header d-flex justify-content-between align-items-center">
           <div class="textMed" v-if="block!==selectedBlock || !editBlock">
