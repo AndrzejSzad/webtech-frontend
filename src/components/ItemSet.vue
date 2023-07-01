@@ -1,6 +1,7 @@
 <template>
+  <!--Rewrite page for better readability TODO-->
     <div>
-  <!--Rewrite section for readability TODO-->
+      
   <div class="btn-group" role="group" style="width: 100%">
       <dropdown>
           <li v-for="itemset in itemsets" :key="itemset.primKey" class="dropdown-item textMed" @click="selectSet(itemset)">
@@ -20,9 +21,9 @@
   <!-- ItemSet part-->
   <div v-if="selectedSet" class="container my-3 " style="border: 1vh ridge #daa520;">
 
-    <div class="card" style="border:none; background-color: #001933; color: darkgoldenrod">
+    <div class="card" style="border:none; background-color: #001933;">
       <h2 v-if="editSet">
-      <input v-model="selectedSet.title" style="background-color: #07213D; color: darkgoldenrod" @keyup.enter="editSet= !editSet">
+      <input v-model="selectedSet.title" @keyup.enter="editSet= !editSet">
       </h2>
       <h2 v-else> {{selectedSet.title }}</h2>
 
@@ -58,7 +59,6 @@
     <!-- ItemBlock part-->
     <div v-for="block in selectedSet.blocks" :key="block.primKey"
          @click="this.selectedBlock = block;" @dragover="this.selectedBlock=block;" @dragenter.prevent @dragover.prevent @drop="onDrop($event)">
-      <!--Temporary Solution, for editing items, saving needs to be bugfixed TODO-->
       <div class="card my-3" :style="{'min-height': '20vh', 'border': '1px solid black', ...highlightSelectedBlock(block)}">
 
         <div class="card-header d-flex justify-content-between align-items-center">
@@ -66,7 +66,7 @@
             {{ block.type }}
           </div>
           <div  class="textMed" v-else>
-            <input v-model="block.type" style="background-color: #0B325B; color: darkgoldenrod" @keyup.enter="editBlock= !editBlock">
+            <input v-model="block.type" @keyup.enter="editBlock= !editBlock">
           </div>
           <medium-button
                   @click="editBlock = !editBlock" title="Edit Item Block name">
@@ -107,8 +107,8 @@ import Dropdown from "@/components/Dropdown.vue";
 import MediumButton from "@/components/MediumButton.vue";
 
 const endpoint = process.env.VUE_APP_BACKEND_BASEURL + '/itemsets';
-let editSet = ref(false);
-let editBlock = ref(false);
+const editSet = ref(false);
+const editBlock = ref(false);
 export default {
 
   data() {
@@ -150,9 +150,9 @@ export default {
         console.log("Entering Save Method");
       axios.post(endpoint, this.selectedSet)
           .then(response => {this.primKey = response.data.primKey;
-      console.error("Saved ItemSet");
+          console.log("Saved ItemSet");
+          this.selectedSet=response.data;
           })
-
           .catch(error => {
             console.error("There was an error saving the ItemSet!", error);
           });
@@ -180,11 +180,11 @@ export default {
       axios.delete(endpoint + "/" + key)
           .then(function (response) {
             console.log(response)
-              location.reload();
           })
           .catch(function (error) {
             console.log(error)
           })
+      location.reload();
     },
 
       selectMaps(key){
@@ -264,6 +264,5 @@ hr{
       color:darkgoldenrod;
       font-size: 1.2vw;
 }
-
 
 </style>

@@ -17,7 +17,6 @@
 .largeBtn{
     height:4vw;
     font-size: 2.2vw;
-    color: darkgoldenrod;
     text-decoration: none;
 }
 
@@ -25,8 +24,11 @@
     color:gold !important;
 }
 
+
 .btn:not(.active){
     color: darkgoldenrod;
 }
+
+
 
 </style>

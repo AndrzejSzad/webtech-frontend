@@ -2,7 +2,7 @@
   <div class= "container-fluid" style="background-color: #001933;">
 
     <div class="row">
-      <div class="col-4 fixedColumn" style="direction: rtl;">
+      <div class="col-4 fixedColumn" style="direction: rtl;   -webkit-user-select: none;">
           <champions></champions>
       </div>
       <div class="col-4 " >
@@ -43,6 +43,7 @@ export default {
   overflow: auto;
   position:sticky;
   top:0;
+
 }
 
 

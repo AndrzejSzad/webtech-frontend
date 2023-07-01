@@ -1,10 +1,14 @@
 <template>
 
+  <div class="input-container">
+    <input type="text" v-model="search" placeholder="Search for Items">
+    <font-awesome-icon :icon="['fas', 'search']" class="search-icon"></font-awesome-icon>
+  </div>
 
-  <input type="text" v-model="search">
   <div class="row row-cols-auto g-0" style="background-color: #001933">
     <div v-for="item in filteredItems" :key="item.key" class="card bg-black" >
-      <img :src="require(`../assets/item/${item.image}`)" class="card-img" alt="{{item.name}}" style="width:4vw;" draggable="true" @dragstart="startDrag($event,item)">
+      <img :src="require(`../assets/item/${item.image}`)" class="card-img" :alt="item.name" :title="item.name" style="width:4vw;" draggable="true" @dragstart="startDrag($event,item)">
+
     </div>
   </div>
 
@@ -14,6 +18,7 @@
 <script>
 
 import Items from "@/assets/data/items.json";
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 
 
@@ -28,10 +33,10 @@ export default {
 
     }
   },
-
+components:{FontAwesomeIcon},
     computed:{
         filteredItems(){
-            return this.items.filter(item => item.name.includes(this.search))
+            return this.items.filter(item => item.name.toLowerCase().includes(this.search))
         }
     },
   methods: {
@@ -52,5 +57,8 @@ export default {
 </script>
 
 <style scoped>
+
+
+
 
 </style>
