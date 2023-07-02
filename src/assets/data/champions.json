@@ -1,816 +1,816 @@
 [
     {
-      "key": "266",
+      "key": 266,
       "name": "Aatrox",
       "image": "Aatrox.png"
     },
     {
-      "key": "103",
+      "key": 103,
       "name": "Ahri",
       "image": "Ahri.png"
     },
     {
-      "key": "84",
+      "key": 84,
       "name": "Akali",
       "image": "Akali.png"
     },
     {
-      "key": "166",
+      "key": 166,
       "name": "Akshan",
       "image": "Akshan.png"
     },
     {
-      "key": "12",
+      "key": 12,
       "name": "Alistar",
       "image": "Alistar.png"
     },
     {
-      "key": "32",
+      "key": 32,
       "name": "Amumu",
       "image": "Amumu.png"
     },
     {
-      "key": "34",
+      "key": 34,
       "name": "Anivia",
       "image": "Anivia.png"
     },
     {
-      "key": "1",
+      "key": 1,
       "name": "Annie",
       "image": "Annie.png"
     },
     {
-      "key": "523",
+      "key": 523,
       "name": "Aphelios",
       "image": "Aphelios.png"
     },
     {
-      "key": "22",
+      "key": 22,
       "name": "Ashe",
       "image": "Ashe.png"
     },
     {
-      "key": "136",
+      "key": 136,
       "name": "Aurelion Sol",
       "image": "AurelionSol.png"
     },
     {
-      "key": "268",
+      "key": 268,
       "name": "Azir",
       "image": "Azir.png"
     },
     {
-      "key": "432",
+      "key": 432,
       "name": "Bard",
       "image": "Bard.png"
     },
     {
-      "key": "200",
+      "key": 200,
       "name": "Bel'Veth",
       "image": "Belveth.png"
     },
     {
-      "key": "53",
+      "key": 53,
       "name": "Blitzcrank",
       "image": "Blitzcrank.png"
     },
     {
-      "key": "63",
+      "key": 63,
       "name": "Brand",
       "image": "Brand.png"
     },
     {
-      "key": "201",
+      "key": 201,
       "name": "Braum",
       "image": "Braum.png"
     },
     {
-      "key": "51",
+      "key": 51,
       "name": "Caitlyn",
       "image": "Caitlyn.png"
     },
     {
-      "key": "164",
+      "key": 164,
       "name": "Camille",
       "image": "Camille.png"
     },
     {
-      "key": "69",
+      "key": 69,
       "name": "Cassiopeia",
       "image": "Cassiopeia.png"
     },
     {
-      "key": "31",
+      "key": 31,
       "name": "Cho'Gath",
       "image": "Chogath.png"
     },
     {
-      "key": "42",
+      "key": 42,
       "name": "Corki",
       "image": "Corki.png"
     },
     {
-      "key": "122",
+      "key": 122,
       "name": "Darius",
       "image": "Darius.png"
     },
     {
-      "key": "131",
+      "key": 131,
       "name": "Diana",
       "image": "Diana.png"
     },
     {
-      "key": "119",
+      "key": 119,
       "name": "Draven",
       "image": "Draven.png"
     },
     {
-      "key": "36",
+      "key": 36,
       "name": "Dr. Mundo",
       "image": "DrMundo.png"
     },
     {
-      "key": "245",
+      "key": 245,
       "name": "Ekko",
       "image": "Ekko.png"
     },
     {
-      "key": "60",
+      "key": 60,
       "name": "Elise",
       "image": "Elise.png"
     },
     {
-      "key": "28",
+      "key": 28,
       "name": "Evelynn",
       "image": "Evelynn.png"
     },
     {
-      "key": "81",
+      "key": 81,
       "name": "Ezreal",
       "image": "Ezreal.png"
     },
     {
-      "key": "9",
+      "key": 9,
       "name": "Fiddlesticks",
       "image": "Fiddlesticks.png"
     },
     {
-      "key": "114",
+      "key": 114,
       "name": "Fiora",
       "image": "Fiora.png"
     },
     {
-      "key": "105",
+      "key": 105,
       "name": "Fizz",
       "image": "Fizz.png"
     },
     {
-      "key": "3",
+      "key": 3,
       "name": "Galio",
       "image": "Galio.png"
     },
     {
-      "key": "41",
+      "key": 41,
       "name": "Gangplank",
       "image": "Gangplank.png"
     },
     {
-      "key": "86",
+      "key": 86,
       "name": "Garen",
       "image": "Garen.png"
     },
     {
-      "key": "150",
+      "key": 150,
       "name": "Gnar",
       "image": "Gnar.png"
     },
     {
-      "key": "79",
+      "key": 79,
       "name": "Gragas",
       "image": "Gragas.png"
     },
     {
-      "key": "104",
+      "key": 104,
       "name": "Graves",
       "image": "Graves.png"
     },
     {
-      "key": "887",
+      "key": 887,
       "name": "Gwen",
       "image": "Gwen.png"
     },
     {
-      "key": "120",
+      "key": 120,
       "name": "Hecarim",
       "image": "Hecarim.png"
     },
     {
-      "key": "74",
+      "key": 74,
       "name": "Heimerdinger",
       "image": "Heimerdinger.png"
     },
     {
-      "key": "420",
+      "key": 420,
       "name": "Illaoi",
       "image": "Illaoi.png"
     },
     {
-      "key": "39",
+      "key": 39,
       "name": "Irelia",
       "image": "Irelia.png"
     },
     {
-      "key": "427",
+      "key": 427,
       "name": "Ivern",
       "image": "Ivern.png"
     },
     {
-      "key": "40",
+      "key": 40,
       "name": "Janna",
       "image": "Janna.png"
     },
     {
-      "key": "59",
+      "key": 59,
       "name": "Jarvan IV",
       "image": "JarvanIV.png"
     },
     {
-      "key": "24",
+      "key": 24,
       "name": "Jax",
       "image": "Jax.png"
     },
     {
-      "key": "126",
+      "key": 126,
       "name": "Jayce",
       "image": "Jayce.png"
     },
     {
-      "key": "202",
+      "key": 202,
       "name": "Jhin",
       "image": "Jhin.png"
     },
     {
-      "key": "222",
+      "key": 222,
       "name": "Jinx",
       "image": "Jinx.png"
     },
     {
-      "key": "145",
+      "key": 145,
       "name": "Kai'Sa",
       "image": "Kaisa.png"
     },
     {
-      "key": "429",
+      "key": 429,
       "name": "Kalista",
       "image": "Kalista.png"
     },
     {
-      "key": "43",
+      "key": 43,
       "name": "Karma",
       "image": "Karma.png"
     },
     {
-      "key": "30",
+      "key": 30,
       "name": "Karthus",
       "image": "Karthus.png"
     },
     {
-      "key": "38",
+      "key": 38,
       "name": "Kassadin",
       "image": "Kassadin.png"
     },
     {
-      "key": "55",
+      "key": 55,
       "name": "Katarina",
       "image": "Katarina.png"
     },
     {
-      "key": "10",
+      "key": 10,
       "name": "Kayle",
       "image": "Kayle.png"
     },
     {
-      "key": "141",
+      "key": 141,
       "name": "Kayn",
       "image": "Kayn.png"
     },
     {
-      "key": "85",
+      "key": 85,
       "name": "Kennen",
       "image": "Kennen.png"
     },
     {
-      "key": "121",
+      "key": 121,
       "name": "Kha'Zix",
       "image": "Khazix.png"
     },
     {
-      "key": "203",
+      "key": 203,
       "name": "Kindred",
       "image": "Kindred.png"
     },
     {
-      "key": "240",
+      "key": 240,
       "name": "Kled",
       "image": "Kled.png"
     },
     {
-      "key": "96",
+      "key": 96,
       "name": "Kog'Maw",
       "image": "KogMaw.png"
     },
     {
-      "key": "897",
+      "key": 897,
       "name": "K'Sante",
       "image": "KSante.png"
     },
     {
-      "key": "7",
+      "key": 7,
       "name": "LeBlanc",
       "image": "Leblanc.png"
     },
     {
-      "key": "64",
+      "key": 64,
       "name": "Lee Sin",
       "image": "LeeSin.png"
     },
     {
-      "key": "89",
+      "key": 89,
       "name": "Leona",
       "image": "Leona.png"
     },
     {
-      "key": "876",
+      "key": 876,
       "name": "Lillia",
       "image": "Lillia.png"
     },
     {
-      "key": "127",
+      "key": 127,
       "name": "Lissandra",
       "image": "Lissandra.png"
     },
     {
-      "key": "236",
+      "key": 236,
       "name": "Lucian",
       "image": "Lucian.png"
     },
     {
-      "key": "117",
+      "key": 117,
       "name": "Lulu",
       "image": "Lulu.png"
     },
     {
-      "key": "99",
+      "key": 99,
       "name": "Lux",
       "image": "Lux.png"
     },
     {
-      "key": "54",
+      "key": 54,
       "name": "Malphite",
       "image": "Malphite.png"
     },
     {
-      "key": "90",
+      "key": 90,
       "name": "Malzahar",
       "image": "Malzahar.png"
     },
     {
-      "key": "57",
+      "key": 57,
       "name": "Maokai",
       "image": "Maokai.png"
     },
     {
-      "key": "11",
+      "key": 11,
       "name": "Master Yi",
       "image": "MasterYi.png"
     },
     {
-      "key": "902",
+      "key": 902,
       "name": "Milio",
       "image": "Milio.png"
     },
     {
-      "key": "21",
+      "key": 21,
       "name": "Miss Fortune",
       "image": "MissFortune.png"
     },
     {
-      "key": "62",
+      "key": 62,
       "name": "Wukong",
       "image": "MonkeyKing.png"
     },
     {
-      "key": "82",
+      "key": 82,
       "name": "Mordekaiser",
       "image": "Mordekaiser.png"
     },
     {
-      "key": "25",
+      "key": 25,
       "name": "Morgana",
       "image": "Morgana.png"
     },
     {
-      "key": "267",
+      "key": 267,
       "name": "Nami",
       "image": "Nami.png"
     },
     {
-      "key": "75",
+      "key": 75,
       "name": "Nasus",
       "image": "Nasus.png"
     },
     {
-      "key": "111",
+      "key": 111,
       "name": "Nautilus",
       "image": "Nautilus.png"
     },
     {
-      "key": "518",
+      "key": 518,
       "name": "Neeko",
       "image": "Neeko.png"
     },
     {
-      "key": "76",
+      "key": 76,
       "name": "Nidalee",
       "image": "Nidalee.png"
     },
     {
-      "key": "895",
+      "key": 895,
       "name": "Nilah",
       "image": "Nilah.png"
     },
     {
-      "key": "56",
+      "key": 56,
       "name": "Nocturne",
       "image": "Nocturne.png"
     },
     {
-      "key": "20",
+      "key": 20,
       "name": "Nunu & Willump",
       "image": "Nunu.png"
     },
     {
-      "key": "2",
+      "key": 2,
       "name": "Olaf",
       "image": "Olaf.png"
     },
     {
-      "key": "61",
+      "key": 61,
       "name": "Orianna",
       "image": "Orianna.png"
     },
     {
-      "key": "516",
+      "key": 516,
       "name": "Ornn",
       "image": "Ornn.png"
     },
     {
-      "key": "80",
+      "key": 80,
       "name": "Pantheon",
       "image": "Pantheon.png"
     },
     {
-      "key": "78",
+      "key": 78,
       "name": "Poppy",
       "image": "Poppy.png"
     },
     {
-      "key": "555",
+      "key": 555,
       "name": "Pyke",
       "image": "Pyke.png"
     },
     {
-      "key": "246",
+      "key": 246,
       "name": "Qiyana",
       "image": "Qiyana.png"
     },
     {
-      "key": "133",
+      "key": 133,
       "name": "Quinn",
       "image": "Quinn.png"
     },
     {
-      "key": "497",
+      "key": 497,
       "name": "Rakan",
       "image": "Rakan.png"
     },
     {
-      "key": "33",
+      "key": 33,
       "name": "Rammus",
       "image": "Rammus.png"
     },
     {
-      "key": "421",
+      "key": 421,
       "name": "Rek'Sai",
       "image": "RekSai.png"
     },
     {
-      "key": "526",
+      "key": 526,
       "name": "Rell",
       "image": "Rell.png"
     },
     {
-      "key": "888",
+      "key": 888,
       "name": "Renata Glasc",
       "image": "Renata.png"
     },
     {
-      "key": "58",
+      "key": 58,
       "name": "Renekton",
       "image": "Renekton.png"
     },
     {
-      "key": "107",
+      "key": 107,
       "name": "Rengar",
       "image": "Rengar.png"
     },
     {
-      "key": "92",
+      "key": 92,
       "name": "Riven",
       "image": "Riven.png"
     },
     {
-      "key": "68",
+      "key": 68,
       "name": "Rumble",
       "image": "Rumble.png"
     },
     {
-      "key": "13",
+      "key": 13,
       "name": "Ryze",
       "image": "Ryze.png"
     },
     {
-      "key": "360",
+      "key": 360,
       "name": "Samira",
       "image": "Samira.png"
     },
     {
-      "key": "113",
+      "key": 113,
       "name": "Sejuani",
       "image": "Sejuani.png"
     },
     {
-      "key": "235",
+      "key": 235,
       "name": "Senna",
       "image": "Senna.png"
     },
     {
-      "key": "147",
+      "key": 147,
       "name": "Seraphine",
       "image": "Seraphine.png"
     },
     {
-      "key": "875",
+      "key": 875,
       "name": "Sett",
       "image": "Sett.png"
     },
     {
-      "key": "35",
+      "key": 35,
       "name": "Shaco",
       "image": "Shaco.png"
     },
     {
-      "key": "98",
+      "key": 98,
       "name": "Shen",
       "image": "Shen.png"
     },
     {
-      "key": "102",
+      "key": 102,
       "name": "Shyvana",
       "image": "Shyvana.png"
     },
     {
-      "key": "27",
+      "key": 27,
       "name": "Singed",
       "image": "Singed.png"
     },
     {
-      "key": "14",
+      "key": 14,
       "name": "Sion",
       "image": "Sion.png"
     },
     {
-      "key": "15",
+      "key": 15,
       "name": "Sivir",
       "image": "Sivir.png"
     },
     {
-      "key": "72",
+      "key": 72,
       "name": "Skarner",
       "image": "Skarner.png"
     },
     {
-      "key": "37",
+      "key": 37,
       "name": "Sona",
       "image": "Sona.png"
     },
     {
-      "key": "16",
+      "key": 16,
       "name": "Soraka",
       "image": "Soraka.png"
     },
     {
-      "key": "50",
+      "key": 50,
       "name": "Swain",
       "image": "Swain.png"
     },
     {
-      "key": "517",
+      "key": 517,
       "name": "Sylas",
       "image": "Sylas.png"
     },
     {
-      "key": "134",
+      "key": 134,
       "name": "Syndra",
       "image": "Syndra.png"
     },
     {
-      "key": "223",
+      "key": 223,
       "name": "Tahm Kench",
       "image": "TahmKench.png"
     },
     {
-      "key": "163",
+      "key": 163,
       "name": "Taliyah",
       "image": "Taliyah.png"
     },
     {
-      "key": "91",
+      "key": 91,
       "name": "Talon",
       "image": "Talon.png"
     },
     {
-      "key": "44",
+      "key": 44,
       "name": "Taric",
       "image": "Taric.png"
     },
     {
-      "key": "17",
+      "key": 17,
       "name": "Teemo",
       "image": "Teemo.png"
     },
     {
-      "key": "412",
+      "key": 412,
       "name": "Thresh",
       "image": "Thresh.png"
     },
     {
-      "key": "18",
+      "key": 18,
       "name": "Tristana",
       "image": "Tristana.png"
     },
     {
-      "key": "48",
+      "key": 48,
       "name": "Trundle",
       "image": "Trundle.png"
     },
     {
-      "key": "23",
+      "key": 23,
       "name": "Tryndamere",
       "image": "Tryndamere.png"
     },
     {
-      "key": "4",
+      "key": 4,
       "name": "Twisted Fate",
       "image": "TwistedFate.png"
     },
     {
-      "key": "29",
+      "key": 29,
       "name": "Twitch",
       "image": "Twitch.png"
     },
     {
-      "key": "77",
+      "key": 77,
       "name": "Udyr",
       "image": "Udyr.png"
     },
     {
-      "key": "6",
+      "key": 6,
       "name": "Urgot",
       "image": "Urgot.png"
     },
     {
-      "key": "110",
+      "key": 110,
       "name": "Varus",
       "image": "Varus.png"
     },
     {
-      "key": "67",
+      "key": 67,
       "name": "Vayne",
       "image": "Vayne.png"
     },
     {
-      "key": "45",
+      "key": 45,
       "name": "Veigar",
       "image": "Veigar.png"
     },
     {
-      "key": "161",
+      "key": 161,
       "name": "Vel'Koz",
       "image": "Velkoz.png"
     },
     {
-      "key": "711",
+      "key": 711,
       "name": "Vex",
       "image": "Vex.png"
     },
     {
-      "key": "254",
+      "key": 254,
       "name": "Vi",
       "image": "Vi.png"
     },
     {
-      "key": "234",
+      "key": 234,
       "name": "Viego",
       "image": "Viego.png"
     },
     {
-      "key": "112",
+      "key": 112,
       "name": "Viktor",
       "image": "Viktor.png"
     },
     {
-      "key": "8",
+      "key": 8,
       "name": "Vladimir",
       "image": "Vladimir.png"
     },
     {
-      "key": "106",
+      "key": 106,
       "name": "Volibear",
       "image": "Volibear.png"
     },
     {
-      "key": "19",
+      "key": 19,
       "name": "Warwick",
       "image": "Warwick.png"
     },
     {
-      "key": "498",
+      "key": 498,
       "name": "Xayah",
       "image": "Xayah.png"
     },
     {
-      "key": "101",
+      "key": 101,
       "name": "Xerath",
       "image": "Xerath.png"
     },
     {
-      "key": "5",
+      "key": 5,
       "name": "Xin Zhao",
       "image": "XinZhao.png"
     },
     {
-      "key": "157",
+      "key": 157,
       "name": "Yasuo",
       "image": "Yasuo.png"
     },
     {
-      "key": "777",
+      "key": 777,
       "name": "Yone",
       "image": "Yone.png"
     },
     {
-      "key": "83",
+      "key": 83,
       "name": "Yorick",
       "image": "Yorick.png"
     },
     {
-      "key": "350",
+      "key": 350,
       "name": "Yuumi",
       "image": "Yuumi.png"
     },
     {
-      "key": "154",
+      "key": 154,
       "name": "Zac",
       "image": "Zac.png"
     },
     {
-      "key": "238",
+      "key": 238,
       "name": "Zed",
       "image": "Zed.png"
     },
     {
-      "key": "221",
+      "key": 221,
       "name": "Zeri",
       "image": "Zeri.png"
     },
     {
-      "key": "115",
+      "key": 115,
       "name": "Ziggs",
       "image": "Ziggs.png"
     },
     {
-      "key": "26",
+      "key": 26,
       "name": "Zilean",
       "image": "Zilean.png"
     },
     {
-      "key": "142",
+      "key": 142,
       "name": "Zoe",
       "image": "Zoe.png"
     },
     {
-      "key": "143",
+      "key": 143,
       "name": "Zyra",
       "image": "Zyra.png"
     }

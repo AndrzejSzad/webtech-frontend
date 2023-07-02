@@ -1,20 +1,23 @@
 <template>
 
 
-    <input type="text" v-model="search" placeholder="Search for Champions" style="direction: ltr">
-    <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
-  <div class="row row-cols-auto g-0">
+  <input class=input; v-model="search" placeholder="Search for Champions" style="direction: ltr; width:75%; border-radius: 10px" type="text">
+  <font-awesome-icon :icon="['fas', 'magnifying-glass']"/>
+  <div class="row row-cols-auto g-0 my-3">
     <div v-for="champion in filteredChampions" :key="champion.key">
-      <div class="card" :style="associatedChampions.indexOf(champion.key) !== -1 ? {'background-color' :'#00FF00'} : {'background-color' : '#000000'}" @click="selectChamp(champion.key)">
-          <img :src="require(`../assets/champion/${champion.image}`)" class="card-img"   :alt="champion.name" :title="champion.name" style="width:4vw;">
-          <div v-if="associatedChampions.indexOf(champion.key)!==-1">
-            <i class="icon">
-              <font-awesome-icon :icon="['fas', 'check']"/>
-            </i>
-          </div>
+      <div :style="associatedChampions.indexOf(champion.key) !== -1 ? {'background-color' :'#00FF00'} : {'background-color' : '#000000'}"
+           class="card"
+           @click="$emit('send-click', champion.key)">
+        <img :alt="champion.name" :src="require(`../assets/champion/${champion.image}`)" :title="champion.name"
+             class="card-img " draggable="false" style="width:4vw;">
+        <div v-if="associatedChampions.indexOf(champion.key)!==-1">
+          <i class="icon">
+            <font-awesome-icon :icon="['fas', 'check']"/>
+          </i>
         </div>
       </div>
     </div>
+  </div>
 
 </template>
 
@@ -26,57 +29,58 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 export default {
 
+  props: {
+    associatedChampions:{
+      type: Array,
+      default: ()=>[]
+    }
+  },
+
   data() {
+
+
+
     return {
       champions: Champions,
-      //placeholder
-      associatedChampions: [],
-        search : '',
+      search: '',
+
 
     }
   },
   components: {FontAwesomeIcon},
-    computed:{
+  computed: {
 
-      filteredChampions(){
-          return this.champions.filter(champion => champion.name.toLowerCase().includes(this.search))
-      }
-    },
+    filteredChampions() {
+      return this.champions.filter(champion => champion.name.toLowerCase().includes(this.search.toLowerCase()))
+    }
+  },
   methods: {
 
-    selectChamp(key){
-      const idx = this.associatedChampions.indexOf(key);
 
-      if(idx!==-1){
-        this.associatedChampions.splice(idx,1);
-        console.log("removing champion "+ key);
-        return;
-      }
-      this.associatedChampions.push(key);
-      console.log("adding champion " + key);
-    },
+
 
   }
-};
+
+}
 
 </script>
 
 <style scoped>
 
 
-
-
-
-.icon{
+.icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 5vh;
-  color:#00FF00;
+  color: #00FF00;
 
 }
 
+input:focus{
+  outline: gold;
+}
 
 
 </style>

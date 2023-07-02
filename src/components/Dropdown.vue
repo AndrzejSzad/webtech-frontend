@@ -16,7 +16,7 @@
 /*Hover color not working, might have something to do with not(.active), fix TODO---> */
 .largeBtn{
     height:4vw;
-    font-size: 2.2vw;
+    font-size: 2vw;
     text-decoration: none;
 }
 
