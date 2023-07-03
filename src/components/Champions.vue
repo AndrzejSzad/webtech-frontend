@@ -28,6 +28,7 @@ import Champions from "../assets/data/champions.json";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 export default {
+  emits: ['send-click'],
 
   props: {
     associatedChampions:{

@@ -1,10 +1,23 @@
 <template>
   <!--Rewrite page for better readability TODO-->
 
+  <Popup v-if="popupTrigger.buttonTrigger">
+    <h1> button popup</h1>
+  </Popup>
+
+  <Popup v-if="popupTrigger.timedTrigger">
+    <h3> Item Set Saved.</h3>
+  </Popup>
+
+
   <div class="container-fluid">
     <div class="row">
 
+
       <div class="col-4 fixedColumn" style="direction: rtl;   -webkit-user-select: none;">
+
+
+
         <champions :associated-champions=assocChampions @send-click="selectChamp"></champions>
       </div>
 
@@ -35,19 +48,21 @@
         <div v-if="selectedSet" class="container my-3 " style="border: 1vh ridge #daa520;" >
 
           <div class="card" style="border:none; background-color: #001933;">
-            <h2 v-if="editSet">
-              <input v-model="selectedSet.title" @keyup.enter="editSet= !editSet">
+            <h2 v-if="selectedSet.editSet">
+              <input v-model="selectedSet.title" @keyup.enter="selectedSet.editSet= !selectedSet.editSet" @blur="selectedSet.editSet=false" >
             </h2>
             <h3 v-else> {{ selectedSet.title }}</h3>
 
             <div class="btn-group" role="group">
-              <medium-button title="Edit Item Set name" @click="editSet = !editSet ">
+              <medium-button title="Edit Item Set name" @click="selectedSet.editSet = !selectedSet.editSet ">
                 <font-awesome-icon :icon="['fas', 'pencil']"/>
               </medium-button>
 
               <medium-button title="Save Item Set" @click="saveSet()">
                 <font-awesome-icon :icon="['fas', 'floppy-disk']"/>
               </medium-button>
+
+
 
               <medium-button title="Export Item Set" @click="exportSet(selectedSet)">
                 <font-awesome-icon :icon="['fas', 'download']"/>
@@ -81,7 +96,7 @@
                   {{ block.type }}
                 </div>
                 <div v-else class="textMed">
-                  <input v-model="block.type" @keyup.enter=editBlockName(block)  @blur="block.editBlock=false"  ref="inputField" >
+                  <input v-model="block.type" @keyup.enter=editBlockName(block)  @blur="block.editBlock=false">
                 </div>
 
                 <medium-button
@@ -132,12 +147,16 @@ import Dropdown from "@/components/Dropdown.vue";
 import MediumButton from "@/components/MediumButton.vue";
 import Items from "@/components/Items.vue";
 import Champions from "@/components/Champions.vue";
-
+import Popup from "@/components/Popup.vue";
+import { ref } from 'vue';
 const endpoint = process.env.VUE_APP_BACKEND_BASEURL + '/itemsets';
 const editSet = false;
 const editBlock = false;
+const popupTrigger= ref({
+  buttonTrigger:false,
+  timedTrigger:false
+})
 export default {
-
 
   data() {
     return {
@@ -146,6 +165,7 @@ export default {
       selectedBlock: null,
       editSet,
       editBlock,
+      popupTrigger,
     }
   },
   computed: {
@@ -158,9 +178,15 @@ export default {
     }
   },
 
-  components: {Champions, Items, MediumButton, Dropdown, LargeButton, FontAwesomeIcon},
+  components: {Popup, Champions, Items, MediumButton, Dropdown, LargeButton, FontAwesomeIcon},
 
   methods: {
+
+    startTimeout() {
+      setTimeout(() => {
+        popupTrigger.value.timedTrigger = false;
+      }, 1000);
+    },
 
     // Black magic, but somehow working.
     uploadFile(event){
@@ -224,6 +250,8 @@ export default {
             this.primKey = response.data.primKey;
             console.log("Saved ItemSet");
             this.selectedSet = response.data;
+            popupTrigger.value.timedTrigger=true;
+            this.startTimeout();
           })
           .catch(error => {
             console.error("There was an error saving the ItemSet!", error);
@@ -263,11 +291,9 @@ export default {
       const idx = this.selectedSet.associatedMaps.indexOf(key);
       if (idx !== -1) {
         this.selectedSet.associatedMaps.splice(idx, 1);
-        console.log(this.selectedSet.associatedMaps);
         return;
       }
       this.selectedSet.associatedMaps.push(key);
-      console.log(this.selectedSet.associatedMaps);
     },
     greyOutMap(key) {
       return this.selectedSet.associatedMaps.indexOf(key) !== -1 ? '' : 'brightness(30%)';

@@ -47,7 +47,6 @@ export default {
   methods: {
 
     startDrag(event, item) {
-      console.log(item)
       event.dataTransfer.dropEffect = 'move'
       event.dataTransfer.effectAllowed = 'move'
       event.dataTransfer.setData('key', item.key);
