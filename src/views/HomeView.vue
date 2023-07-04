@@ -1,19 +1,16 @@
 <template>
 
   <div class="home">
-      <img src="../assets/ui/logo.png" alt="League of Legends Logo" class = img-fluid width=500>
-    <HelloWorld msg="Hello World"/>
+      <img src="../assets/logo.png" alt="League of Legends Logo" class = img-fluid width=500>
+    <Instruction></Instruction>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Instruction from '@/components/Instruction.vue'
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+  components: {Instruction}
 }
 </script>

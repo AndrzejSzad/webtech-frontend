@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar navbar-expand navbar-dark nav-style">
-    <a class="navbar-brand" style="color: #f5ab2c; font-size: 32px; font-weight: bolder; text-shadow:red 0px 0px 10px">Item
+  <nav class="navbar navbar-expand navbar-dark nav-style" >
+    <a class="navbar-brand" style="color: #f5ab2c; font-weight: bolder; font-size: 5vh; text-shadow: red 0 0 10px;">Item
       Set Creator</a>
-    <ul class="nav nav-pills">
-      <router-link class="nav-link" to="/">Home</router-link>
+    <ul class="nav nav-pills active" >
+      <router-link class="nav-link" to="/">Home</router-link >
       <router-link class="nav-link" to="/itemsets">Item Sets</router-link>
     </ul>
   </nav>
@@ -15,9 +15,9 @@
 <style scoped>
 
 .nav-style {
-  font-size: 25px;
-  width: 100%;
+  font-size: 3vh;
   background-color: #001933;
+  height: 10vh;
 }
 
 .nav-pills .nav-link.active {
