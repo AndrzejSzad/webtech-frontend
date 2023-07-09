@@ -10,11 +10,8 @@
 
     <div v-for="item in filteredItems" :key="item.key" class="card bg-black">
       <img :alt="item.name" :src="require(`../assets/item/${item.image}`)" :title="item.name" class="card-img"
-           draggable="true" style="width:4vw;" @dragstart="startDrag($event,item)" @click="toggleHover(item)"
-          >
-      <div class="card item-info" v-show="item.hover" style="font-size: 0.2vw">
-        {{item}}
-      </div>
+           draggable="true" style="width:4vw;" @dragstart="startDrag($event,item)">
+
     </div>
 
   </div>
@@ -51,17 +48,7 @@ export default {
       event.dataTransfer.effectAllowed = 'move'
       event.dataTransfer.setData('key', item.key);
 
-    },
-
-    toggleHover(clickedItem) {
-      this.filteredItems.forEach(item => {
-        if (item !== clickedItem) {
-          item.hover = false;
-        }
-      });
-      clickedItem.hover = !clickedItem.hover;
     }
-
 
   }
 };
@@ -70,11 +57,6 @@ export default {
 
 <style scoped>
 
-.item-info{
-  height:fit-content;
-  width:5vw;
-
-}
 
 input:focus{
   outline: gold;
