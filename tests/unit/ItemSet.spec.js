@@ -7,7 +7,7 @@ describe('ItemSet', () => {
     it('renders ItemSet', () => {
 
         const wrapper = shallowMount(ItemSet,{
-           
+
         })
         const champions = wrapper.findComponent(Champions)
         const items = wrapper.findComponent(Items)
